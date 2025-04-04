@@ -9,6 +9,11 @@ const Home = () => {
         <LinePath />
         <div className="absolute top-0 left-0 w-[45%] z-0 scale-90">
           <BlobOne />
+          <img
+            src="/gato.png"
+            alt="gato"
+            className="h-28 lg:h-100 absolute  top-[15%] left-[10%] lg:top-[17%] lg:left-[13%] z-10"
+          />
         </div>
         <div className="bg-light-gray absolute h-[25%] w-[32%] bottom-[15%] left-[10%] -rotate-15 rounded-l-full lg:rounded-full lg:w-[38%] lg:h-[38%] lg:bottom-[0%] " />
 
@@ -18,8 +23,14 @@ const Home = () => {
         <div className="pill rotate-8 absolute top-[27%] left-[45%]">
           PERROS
         </div>
+
         <div className="absolute top-[23%] right-[3%] w-[45%] z-0 ">
           <BlobTwo />
+          <img
+            src="/perro.png"
+            alt="perro"
+            className="h-28 lg:h-100 absolute  top-[6%] left-[35%] lg:top-[10%] lg:left-[30%] rotate-y-180 z-10"
+          />
         </div>
         <motion.div whileHover={{ scale: 1.1 }}>
           <button className="button-pill -rotate-13 absolute bottom-[14%] left-[33%] hover:cursor-pointer">
