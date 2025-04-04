@@ -1,6 +1,6 @@
 export const TopMenu = () => {
   return (
-    <div className="flex flex-row items-center w-screen justify-between mt-7 px-7  lg:pr-10  text-sm  lg:text-xl ">
+    <div className="flex flex-row items-center w-screen justify-between mt-7 px-7  lg:pr-10  text-sm  lg:text-xl max-w-full">
       <img
         src="/heart-green.png"
         alt="logo"
