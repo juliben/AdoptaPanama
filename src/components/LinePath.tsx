@@ -6,6 +6,7 @@ export const LinePath = () => {
       viewBox="0 0 426 229"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="relative -rotate-4 translate-x-[-5%] translate-y-[-10%] z-20"
     >
       <path
         id="curve"
