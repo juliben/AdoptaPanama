@@ -5,7 +5,7 @@ export const LinePath = () => {
       height="100%"
       viewBox="0 0 426 229"
       fill="none"
-      className="relative translate-x-[-8%] translate-y-[-2%] scale-105 z-20"
+      className="relative translate-x-[-8%] translate-y-[-2%] scale-105 z-10"
     >
       <path
         id="curve"
