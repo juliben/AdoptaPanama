@@ -8,7 +8,7 @@ export function DogBlob({}) {
       <img
         src="/perro.png"
         alt="perro"
-        className="w-1/2 inset-0 absolute scale-x-[-1] translate-[9.5%] translate-x-[53%] z-30"
+        className="w-1/2 inset-0 absolute scale-x-[-1] translate-[9.5%] translate-x-[53%] z-30 "
         style={{ clipPath: "url(#blob-two)" }}
       />
     </div>

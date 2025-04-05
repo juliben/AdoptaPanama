@@ -5,7 +5,7 @@ type Props = {
   onClick: () => void;
 };
 
-const HamburgerMenu = ({ onClick }: Props) => {
+export const HamburgerMenu = ({ onClick }: Props) => {
   return (
     <div className="sm:hidden flex justify-between mx-5 mt-4 ">
       <motion.img
@@ -23,5 +23,3 @@ const HamburgerMenu = ({ onClick }: Props) => {
     </div>
   );
 };
-
-export default HamburgerMenu;

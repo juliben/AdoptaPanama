@@ -9,7 +9,7 @@ export const TopMenu = () => {
         }}
         src="/heart-green.png"
         alt="logo"
-        className="w-4 h-4 lg:w-6 lg:h-6"
+        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
       />
       <div className="flex flex-row gap-2 md:gap-10">
         <p className="hover:cursor-pointer">Mascotas Perdidas</p>|
