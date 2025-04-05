@@ -1,11 +1,21 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { TopMenu, LinePath, DogBlob } from "../components";
-import { motion } from "motion/react";
+import HamburgerMenu from "../components/HamburgerMenu";
+import DrawerMenu from "../components/DrawerMenu";
 
 const Home = () => {
+  const [drawerVisible, setDrawerVisible] = useState(false);
+
   return (
     <div className="lg:mx-10 ">
       <TopMenu />
-
+      <HamburgerMenu onClick={() => setDrawerVisible(true)} />{" "}
+      <AnimatePresence>
+        {drawerVisible && (
+          <DrawerMenu onClick={() => setDrawerVisible(false)} />
+        )}
+      </AnimatePresence>
       <div className="relative  bg-light-gray m-5 rounded-4xl  overflow-hidden md:h-130 lg:h-168 pb-10  z-1 ">
         <LinePath />
         <img

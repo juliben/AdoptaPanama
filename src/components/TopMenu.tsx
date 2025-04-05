@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 export const TopMenu = () => {
   return (
-    <div className="flex flex-row items-center w-screen justify-between mt-7 px-7  lg:pr-10  text-sm  lg:text-xl max-w-full lg:h-13">
+    <div className="hidden sm:flex flex-row items-center  w-screen justify-between mt-7 px-7  lg:pr-10  text-sm  lg:text-xl max-w-full lg:h-13">
       <motion.img
         whileHover={{
           rotate: 360,
