@@ -3,3 +3,4 @@ export * from "./LinePath";
 export * from "./BlobTwo";
 export * from "./BlobBackground";
 export * from "./BlobTwoClipPath";
+export * from "./DogBlob";

@@ -1,7 +1,12 @@
+import { motion } from "motion/react";
 export const TopMenu = () => {
   return (
     <div className="flex flex-row items-center w-screen justify-between mt-7 px-7  lg:pr-10  text-sm  lg:text-xl max-w-full lg:h-13">
-      <img
+      <motion.img
+        whileHover={{
+          rotate: 360,
+          transition: { duration: 0.4, ease: "easeOut" },
+        }}
         src="/heart-green.png"
         alt="logo"
         className="w-4 h-4 lg:w-6 lg:h-6"
