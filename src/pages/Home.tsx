@@ -1,5 +1,12 @@
-import { TopMenu, LinePath, BlobOne, BlobTwo } from "../components";
+import {
+  TopMenu,
+  LinePath,
+  BlobOne,
+  BlobTwo,
+  BlobTwoClipPath,
+} from "../components";
 import { motion } from "motion/react";
+import { DogBlob } from "../components/DogBlob";
 
 const Home = () => {
   return (
@@ -24,13 +31,10 @@ const Home = () => {
           PERROS
         </div>
 
-        <div className="absolute top-[23%] right-[3%] w-[45%] z-0 ">
-          <BlobTwo />
-          <img
-            src="/perro.png"
-            alt="perro"
-            className="h-28 lg:h-100 absolute  top-[6%] left-[35%] lg:top-[10%] lg:left-[30%] rotate-y-180 z-10"
-          />
+        <div className="absolute top-[23%] right-[3%] w-[45%] z-0">
+          <div className="absolute top-[10%] left-0 w-[45%] z-0">
+            <DogBlob />
+          </div>
         </div>
         <motion.div whileHover={{ scale: 1.1 }}>
           <button className="button-pill -rotate-13 absolute bottom-[14%] left-[33%] hover:cursor-pointer">
