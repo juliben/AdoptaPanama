@@ -11,6 +11,7 @@ import {
 } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
+import { PetDetails } from "./pages/PetDetails";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/reports" element={<Reports />} />
           <Route path="/create-report" element={<CreateReport />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/pet-details:id" element={<PetDetails />} />
         </Routes>
       </Router>
     </AuthProvider>

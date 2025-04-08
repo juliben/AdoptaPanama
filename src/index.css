@@ -107,10 +107,10 @@ p {
     @apply bg-light-gray absolute h-[10%] w-[20%] top-[30%]  right-[26%] sm:top-[32%] md:top-[35%] -rotate-25 sm:-rotate-30 rounded-full z-1 lg:hidden;
   }
   .category {
-    @apply mr-3 text-dark-primary outline outline-dark-primary rounded-full px-3 py-1;
+    @apply mr-3 text-dark-primary outline outline-dark-primary rounded-full px-3 py-1 hover:cursor-pointer;
   }
   .category-selected {
-    @apply mr-3 text-white bg-primary outline outline-primary rounded-full px-3 py-1;
+    @apply mr-3 text-white bg-primary outline outline-primary rounded-full px-3 py-1 hover:cursor-pointer;
   }
 }
 

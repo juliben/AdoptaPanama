@@ -1,45 +1,52 @@
-import { useState, useEffect } from "react";
-import { TopRow } from "../components";
+import { SortMenu } from "./../components/SortMenu";
+import { ListingsComponent } from "./../components/ListingsComponent";
+import { useState, useEffect, useContext } from "react";
+import { TopRow, CategoryRow } from "../components";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthContext";
 
 export const Listings = () => {
+  const [animals, setAnimals] = useState<any[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const [sortMenuVisible, setSortMenuVisible] = useState(false);
+  const navigate = useNavigate();
+  const user = useContext(AuthContext);
 
   const isSelected = (category: string) => {
     return selectedCategory === category;
   };
 
+  const handleNavigate = () => {
+    if (user) {
+      navigate("/create-listing");
+    } else {
+      navigate("/register");
+    }
+  };
+
   return (
     <>
       <TopRow />
-      <div className="flex flex-row mx-4 my-5">
-        <p
-          onClick={() => setSelectedCategory("Todos")}
-          className={isSelected("Todos") ? "category-selected" : "category"}
-        >
-          Todos
-        </p>
-        <p
-          onClick={() => setSelectedCategory("Perros")}
-          className={isSelected("Perros") ? "category-selected" : "category"}
-        >
-          Perros
-        </p>
-        <p
-          onClick={() => setSelectedCategory("Gatos")}
-          className={isSelected("Gatos") ? "category-selected" : "category"}
-        >
-          Gatos
-        </p>
-        <p
-          onClick={() => setSelectedCategory("Otros")}
-          className={isSelected("Otros") ? "category-selected" : "category"}
-        >
-          Otros
-        </p>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mx-4">
-        <div className="bg-light-gray h-[250px] rounded-2xl"></div>
-      </div>
+      <CategoryRow
+        setSelectedCategory={setSelectedCategory}
+        isSelected={isSelected}
+        setSortMenuVisible={setSortMenuVisible}
+        sortMenuVisible={sortMenuVisible}
+      />
+      {sortMenuVisible && <SortMenu />}
+      {animals.length > 0 ? (
+        <ListingsComponent />
+      ) : (
+        <div className="flex-center mt-10 flex-col">
+          <p>No hay animalitos en adopción.</p>
+          <button
+            className="bg-accent-light font-primary-semibold py-3 px-4 rounded-full mt-6"
+            onClick={handleNavigate}
+          >
+            Hacer una publicación
+          </button>
+        </div>
+      )}
     </>
   );
 };
