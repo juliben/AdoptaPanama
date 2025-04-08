@@ -1,7 +1,7 @@
 export type User = {
   id: number;
   created_ai: string;
-  username: string;
+  display_name: string;
   whatsapp: string;
   listings: number[];
 };

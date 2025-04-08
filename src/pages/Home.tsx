@@ -1,31 +1,15 @@
-import { useState } from "react";
-import { AnimatePresence } from "motion/react";
-import {
-  HamburgerMenu,
-  TopMenu,
-  DrawerMenu,
-  MainBanner,
-  PinkDiv,
-} from "../components";
+import { TopRow } from "./../components/TopRow";
+
+import { MainBanner, PinkDiv } from "../components";
 import { CarrouselDiv } from "../components/CarrouselDiv";
 
-const Home = () => {
-  const [drawerVisible, setDrawerVisible] = useState(false);
-
+export const Home = () => {
   return (
     <div className="lg:mx-10 h-screen w-full">
-      <TopMenu />
-      <HamburgerMenu onClick={() => setDrawerVisible(true)} />{" "}
-      <AnimatePresence>
-        {drawerVisible && (
-          <DrawerMenu onClick={() => setDrawerVisible(false)} />
-        )}
-      </AnimatePresence>
-      <MainBanner drawerVisible={drawerVisible} />
+      <TopRow />
+      <MainBanner />
       <PinkDiv />
       <CarrouselDiv />
     </div>
   );
 };
-
-export default Home;
