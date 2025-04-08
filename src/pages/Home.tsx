@@ -7,6 +7,7 @@ import {
   MainBanner,
   PinkDiv,
 } from "../components";
+import { CarrouselDiv } from "../components/CarrouselDiv";
 
 const Home = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -22,6 +23,7 @@ const Home = () => {
       </AnimatePresence>
       <MainBanner drawerVisible={drawerVisible} />
       <PinkDiv />
+      <CarrouselDiv />
     </div>
   );
 };
