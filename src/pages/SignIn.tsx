@@ -65,7 +65,7 @@ export const SignIn = () => {
         </Formik>
       </div>
       <div className="flex flex-row justify-center items-center gap-1.5 mt-7">
-        <p>No tienes una cuenta?</p>
+        <p>¿No tienes una cuenta?</p>
         <a href="/register">
           <p className="text-primary">Registrarse</p>
         </a>

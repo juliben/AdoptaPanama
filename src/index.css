@@ -72,7 +72,7 @@ p {
   --color-soft-pink: #f3d1ed;
   --color-pastel-purple: #ecc4e6;
   --font-primary: "Aceh", sans-serif;
-  --font-semibold: "Aceh-SemiBold", sans-serif;
+  --font-primary-semibold: "Aceh-SemiBold", sans-serif;
 }
 
 @layer components {
@@ -86,25 +86,31 @@ p {
     @apply text-red-400 font-sans text-xs mb-2;
   }
   .button-submit {
-    @apply bg-accent-light font-semibold py-3 px-2 rounded-full mt-1 shadow;
+    @apply bg-accent-light font-primary-semibold py-3 px-2 rounded-full mt-1 shadow hover:cursor-pointer;
   }
   .pill {
-    @apply rounded-full px-2 py-1 sm:px-5 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 text-xs  sm:text-lg md:text-2xl lg:text-3xl bg-white text-dark-primary font-semibold max-w-fit;
+    @apply rounded-full px-2 py-1 sm:px-5 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 text-xs  sm:text-lg md:text-2xl lg:text-3xl bg-white text-dark-primary font-primary-semibold max-w-fit;
   }
   .button-pill {
-    @apply py-5 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-semibold rounded-full max-w-fit shadow;
+    @apply py-5 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-primary-semibold rounded-full max-w-fit shadow hover:cursor-pointer;
   }
   .button-pill-small {
-    @apply py-2 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-semibold rounded-full max-w-fit shadow;
+    @apply py-2 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-primary-semibold rounded-full max-w-fit shadow hover:cursor-pointer;
   }
   .menu-text {
-    @apply pr-2 text-5xl mb-3 text-right font-semibold text-white;
+    @apply pr-2 text-5xl mb-7 text-right font-sans font-semibold text-white hover:cursor-pointer;
   }
   .gray-patch-1 {
     @apply bg-light-gray absolute h-[12%] w-[25%] bottom-[33%] left-[15%] sm:bottom-[28%] lg:bottom-[16%] lg:w-[28%] lg:h-[20%]  -rotate-6 rounded-full;
   }
   .gray-patch-2 {
     @apply bg-light-gray absolute h-[10%] w-[20%] top-[30%]  right-[26%] sm:top-[32%] md:top-[35%] -rotate-25 sm:-rotate-30 rounded-full z-1 lg:hidden;
+  }
+  .category {
+    @apply mr-3 text-dark-primary outline outline-dark-primary rounded-full px-3 py-1;
+  }
+  .category-selected {
+    @apply mr-3 text-white bg-primary outline outline-primary rounded-full px-3 py-1;
   }
 }
 

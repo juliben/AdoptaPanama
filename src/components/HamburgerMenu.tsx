@@ -7,7 +7,7 @@ type Props = {
 
 export const HamburgerMenu = ({ onClick }: Props) => {
   return (
-    <div className="sm:hidden flex justify-between mx-5 mt-4 ">
+    <div className="sm:hidden flex justify-between mx-5 mt-4 hover:cursor-pointer ">
       <motion.img
         src="/heart-green.png"
         alt="logo"
@@ -17,7 +17,7 @@ export const HamburgerMenu = ({ onClick }: Props) => {
           transition: { duration: 1, ease: "easeOut" },
         }}
       />
-      <button onClick={onClick}>
+      <button onClick={onClick} className="hover:cursor-pointer">
         <LuMenu size={30} />
       </button>
     </div>

@@ -1,8 +1,10 @@
 import { motion } from "motion/react";
 import { DogBlob } from "./DogBlob";
 import { LinePath } from "./LinePath";
+import { useNavigate } from "react-router-dom";
 
 export function MainBanner() {
+  const navigate = useNavigate();
   return (
     <div className="main-banner">
       <LinePath />
@@ -28,6 +30,7 @@ export function MainBanner() {
       </div>
 
       <motion.button
+        onClick={() => navigate("/listings")}
         animate={{
           rotate: [0, 4, -4, 4, -4, 0],
           transition: { delay: 2, duration: 0.5 },
