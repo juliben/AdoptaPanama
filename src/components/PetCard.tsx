@@ -34,7 +34,7 @@ export const PetCard = ({ pet, index }: Props) => {
         {pet && (
           <motion.button
             whileTap={{ scale: 0.9 }}
-            className="absolute text-center bg-accent-light rounded-full w-[90%] self-center py-3 bottom-2"
+            className="absolute text-center bg-accent-light rounded-full w-[90%] self-center py-3 bottom-2 shadow"
           >
             Contactar
           </motion.button>

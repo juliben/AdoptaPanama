@@ -32,6 +32,10 @@ export function MainBanner({ drawerVisible }: Props) {
 
       <motion.button
         onClick={() => console.log(drawerVisible)}
+        animate={{
+          rotate: [0, 4, -4, 4, -4, 0],
+          transition: { delay: 2, duration: 0.5 },
+        }}
         whileHover={{
           scale: 1.1,
         }}
