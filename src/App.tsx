@@ -8,6 +8,7 @@ import {
   Reports,
   CreateReport,
   Contact,
+  Fork,
 } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -28,6 +29,8 @@ function App() {
           <Route path="/create-report" element={<CreateReport />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/pet-details:id" element={<PetDetails />} />
+          <Route path="/pet-details:id" element={<PetDetails />} />
+          <Route path="/way" element={<Fork />} />
         </Routes>
       </Router>
     </AuthProvider>

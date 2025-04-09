@@ -1,6 +1,6 @@
 import { IoClose } from "react-icons/io5";
 import { motion } from "motion/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { signOut } from "../supabase/auth";
@@ -11,6 +11,7 @@ type Props = {
 
 export const DrawerMenu = ({ onClick }: Props) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const user = useContext(AuthContext);
 
   const handleSignOut = async () => {
@@ -33,27 +34,14 @@ export const DrawerMenu = ({ onClick }: Props) => {
           className="text-white mb-10 hover:cursor-pointer"
           onClick={onClick}
         />
-        <p className="menu-text" onClick={() => navigate("/")}>
-          Inicio
-        </p>
+        {location.pathname !== "/" && (
+          <p className="menu-text" onClick={() => navigate("/")}>
+            Inicio
+          </p>
+        )}
         {user && (
           <p className="menu-text" onClick={() => navigate("/profile")}>
             Mi perfil
-          </p>
-        )}
-
-        <p className="menu-text " onClick={() => navigate("/listings")}>
-          Adoptar
-        </p>
-        <p className="menu-text" onClick={() => navigate("/reports")}>
-          Mascotas Perdidas
-        </p>
-        <p className="menu-text" onClick={() => navigate("/contact")}>
-          Contacto
-        </p>
-        {user && (
-          <p className="menu-text mt-10" onClick={handleSignOut}>
-            Cerrar sesión
           </p>
         )}
         {!user && (
@@ -64,6 +52,17 @@ export const DrawerMenu = ({ onClick }: Props) => {
         {!user && (
           <p className="menu-text" onClick={() => navigate("/sign-in")}>
             Iniciar sesión
+          </p>
+        )}
+        <p className="menu-text " onClick={() => navigate("/listings")}>
+          Adoptar
+        </p>
+        <p className="menu-text" onClick={() => navigate("/reports")}>
+          Mascotas Perdidas
+        </p>
+        {user && (
+          <p className="menu-text mt-10" onClick={handleSignOut}>
+            Cerrar sesión
           </p>
         )}
       </div>

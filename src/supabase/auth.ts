@@ -7,6 +7,14 @@ export const signUp = async (email: string, password: string) => {
     if (error) {
       throw error;
     }
+    if (data.user) {
+      const { error } = await supabase
+        .from("users")
+        .insert({ id: data.user.id, email: data.user.email });
+      if (error) {
+        throw error;
+      }
+    }
 
     return data;
   } catch (error) {
@@ -23,6 +31,7 @@ export const signIn = async (email: string, password: string) => {
     if (error) {
       throw error;
     }
+
     return data;
   } catch (error) {
     console.log("Error trying to log in", error);

@@ -1,9 +1,12 @@
 export type User = {
   id: number;
+  email: string;
   created_ai: string;
   display_name: string;
   whatsapp: string;
   listings: number[];
+  location: string;
+  profile_image: string;
 };
 
 export type Pet = {

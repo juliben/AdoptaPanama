@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { TopRow } from "../components/TopRow";
 import { Formik, FormikValues } from "formik";
@@ -6,11 +7,16 @@ import { useNavigate } from "react-router-dom";
 
 export const SignIn = () => {
   const navigate = useNavigate();
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (values: FormikValues) => {
-    const session = signIn(values.email, values.password);
-    console.log("Signed in:" + session);
-    navigate("/");
+  const handleSubmit = async (values: FormikValues) => {
+    const session = await signIn(values.email, values.password);
+    if (session) {
+      console.log("Session:" + session);
+      navigate("/");
+    } else {
+      setError("Correo electrónico o contraseña incorrectos.");
+    }
   };
 
   return (
@@ -54,7 +60,7 @@ export const SignIn = () => {
               />
 
               <motion.button
-                // whileTap={{ scale: 0.99 }}
+                whileTap={{ scale: 0.97 }}
                 className="button-submit"
                 type="submit"
               >
@@ -64,15 +70,13 @@ export const SignIn = () => {
           )}
         </Formik>
       </div>
+      {error && <p className="error-text px-5 mt-7">{error}</p>}
       <div className="flex flex-row justify-center items-center gap-1.5 mt-7">
         <p>¿No tienes una cuenta?</p>
         <a href="/register">
           <p className="text-primary">Registrarse</p>
         </a>
       </div>
-      {/* <button onClick={() => signOut()} className="button-submit mx-2">
-        Debug
-      </button> */}
     </>
   );
 };

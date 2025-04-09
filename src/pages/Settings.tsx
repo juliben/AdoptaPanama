@@ -40,17 +40,6 @@ export const Profile = () => {
               <IoIosList size={25} />
               <p>Mis publicaciones</p>
             </div>
-            <div className="flex flex-row items-center gap-2">
-              <IoSettingsOutline size={25} />
-              <p>Configuración</p>
-            </div>
-            <div
-              className="flex flex-row items-center gap-2 text-red-400"
-              onClick={handleSignOut}
-            >
-              <AiOutlineLogout size={25} />
-              <p>Cerrar sesión</p>
-            </div>
           </div>
         </div>
       </div>

@@ -43,7 +43,9 @@ export const Listings = () => {
             className="bg-accent-light font-primary-semibold py-3 px-4 rounded-full mt-6"
             onClick={handleNavigate}
           >
-            Hacer una publicación
+            {user
+              ? "Hacer una publicación"
+              : "Iniciar sesión para hacer una publicación"}
           </button>
         </div>
       )}

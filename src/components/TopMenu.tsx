@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 export const TopMenu = () => {
+  const navigate = useNavigate();
   return (
     <div className="hidden sm:flex flex-row items-center  w-screen justify-between mt-7 px-7  lg:pr-10  text-sm  lg:text-xl max-w-full lg:h-13">
       <motion.img
@@ -10,6 +12,7 @@ export const TopMenu = () => {
         src="/heart-green.png"
         alt="logo"
         className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+        onClick={() => navigate("/")}
       />
       <div className="flex flex-row gap-2 md:gap-10">
         <p className="hover:cursor-pointer">Mascotas Perdidas</p>|
