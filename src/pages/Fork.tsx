@@ -28,7 +28,7 @@ export const Fork = () => {
           src="/blob-scene-pink.png"
           className="w-full h-full object-cover"
         />
-        <h3 className="absolute">Quiero adoptar</h3>
+        <h4 className="absolute text-xl">Quiero adoptar</h4>
       </motion.div>
       <motion.div
         whileTap={{ scale: 0.97 }}
@@ -39,7 +39,7 @@ export const Fork = () => {
           src="/blob-scene-green.png"
           className="w-full h-full object-cover"
         />
-        <h3 className="absolute">Quiero publicar un animal</h3>
+        <h4 className="absolute text-xl">Quiero publicar un animal</h4>
       </motion.div>
       <motion.div
         whileTap={{ scale: 0.97 }}
@@ -50,9 +50,9 @@ export const Fork = () => {
           src="/blob-scene-gray2.png"
           className="w-full h-full object-cover "
         />
-        <h3 className="absolute text-center">
+        <h4 className="absolute text-center text-xl">
           Quiero reportar una mascota perdida
-        </h3>
+        </h4>
       </motion.div>
     </div>
   );

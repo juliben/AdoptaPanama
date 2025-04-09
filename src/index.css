@@ -124,4 +124,7 @@ p {
   .mobile {
     @apply sm:hidden;
   }
+  .flip {
+    @apply scale-x-[-1];
+  }
 }

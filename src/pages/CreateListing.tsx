@@ -74,6 +74,7 @@ export const CreateListing = () => {
         name: values.name,
         age: values.age,
         species: values.species,
+        sex: values.sex,
         location: values.location,
         description: values.description,
         image: imagePublicUrlRef.current,
@@ -106,6 +107,7 @@ export const CreateListing = () => {
         <Formik
           initialValues={{
             species: "",
+            sex: "",
             name: "",
             age: 0,
             location: "",
@@ -154,6 +156,35 @@ export const CreateListing = () => {
                   Otro
                 </label>
               </div>
+
+              <p>Sexo</p>
+              <div className="flex space-x-4 my-3">
+                <label>
+                  <input
+                    id="macho"
+                    name="sex"
+                    value="macho"
+                    checked={values.sex === "macho"}
+                    onChange={handleChange}
+                    type="radio"
+                    className="mr-2 accent-primary"
+                  />
+                  Macho
+                </label>
+                <label>
+                  <input
+                    id="hembra"
+                    name="sex"
+                    value="hembra"
+                    checked={values.sex === "hembra"}
+                    onChange={handleChange}
+                    type="radio"
+                    className="mr-2  accent-primary "
+                  />
+                  Hembra
+                </label>
+              </div>
+
               <p>Foto</p>
               <input
                 onChange={handleImagePick}

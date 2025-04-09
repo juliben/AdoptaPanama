@@ -13,6 +13,7 @@ export type Pet = {
   id: string;
   created_at: string;
   species: string;
+  sex: "macho" | "hembra";
   name: string;
   age: number;
   breed: string;
@@ -22,3 +23,9 @@ export type Pet = {
   user: number; // ID of the user who listed the pet
   adopted: boolean;
 };
+
+export type SortMethod =
+  | "oldestPosted"
+  | "newestPosted"
+  | "ageDescending"
+  | "ageAscending";

@@ -16,26 +16,26 @@ export const CategoryRow = ({
   return (
     <div className="flex flex-row mx-4 my-5 justify-center items-center">
       <p
-        onClick={() => setSelectedCategory("Todos")}
-        className={isSelected("Todos") ? "category-selected" : "category"}
+        onClick={() => setSelectedCategory("all")}
+        className={isSelected("all") ? "category-selected" : "category"}
       >
         Todos
       </p>
       <p
-        onClick={() => setSelectedCategory("Perros")}
-        className={isSelected("Perros") ? "category-selected" : "category"}
+        onClick={() => setSelectedCategory("dog")}
+        className={isSelected("dog") ? "category-selected" : "category"}
       >
         Perros
       </p>
       <p
-        onClick={() => setSelectedCategory("Gatos")}
-        className={isSelected("Gatos") ? "category-selected" : "category"}
+        onClick={() => setSelectedCategory("cat")}
+        className={isSelected("cat") ? "category-selected" : "category"}
       >
         Gatos
       </p>
       <p
-        onClick={() => setSelectedCategory("Otros")}
-        className={isSelected("Otros") ? "category-selected" : "category"}
+        onClick={() => setSelectedCategory("other")}
+        className={isSelected("other") ? "category-selected" : "category"}
       >
         Otros
       </p>
