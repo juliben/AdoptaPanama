@@ -4,9 +4,19 @@ import { SortMethod } from "../../types";
 type Props = {
   sortMethod: SortMethod;
   setSortMethod: (method: SortMethod) => void;
+  setSortMenuVisible: (visible: boolean) => void;
 };
 
-export function SortMenu({ sortMethod, setSortMethod }: Props) {
+export function SortMenu({
+  sortMethod,
+  setSortMethod,
+  setSortMenuVisible,
+}: Props) {
+  const handleClick = (sortMethod: SortMethod) => {
+    setSortMethod(sortMethod);
+    setSortMenuVisible(false);
+  };
+
   return (
     <AnimatePresence>
       <motion.div
@@ -18,32 +28,32 @@ export function SortMenu({ sortMethod, setSortMethod }: Props) {
       >
         <p className="font-primary-semibold">Ordenar por:</p>
         <p
-          onClick={() => setSortMethod("oldestPosted")}
-          className={`menu-option mt-5 ${
+          onClick={() => handleClick("oldestPosted")}
+          className={`menu-option mt-5 cursor-pointer ${
             sortMethod === "oldestPosted" ? "underline" : ""
           } `}
         >
           Más antiguo
         </p>
         <p
-          onClick={() => setSortMethod("newestPosted")}
-          className={`menu-option mt-5 ${
+          onClick={() => handleClick("newestPosted")}
+          className={`menu-option mt-5 cursor-pointer ${
             sortMethod === "newestPosted" ? "underline" : ""
           } `}
         >
           Más reciente
         </p>
         <p
-          onClick={() => setSortMethod("ageDescending")}
-          className={`menu-option mt-5 ${
+          onClick={() => handleClick("ageDescending")}
+          className={`menu-option mt-5 cursor-pointer ${
             sortMethod === "ageDescending" ? "underline" : ""
           } `}
         >
           Mayor edad
         </p>
         <p
-          onClick={() => setSortMethod("ageAscending")}
-          className={`menu-option mt-5 ${
+          onClick={() => handleClick("ageAscending")}
+          className={`menu-option mt-5 cursor-pointer ${
             sortMethod === "ageAscending" ? "underline" : ""
           } `}
         >

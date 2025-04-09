@@ -13,15 +13,15 @@ export const PetContainer = ({ pet }: Props) => {
   };
   return (
     <div
-      className="relative h-[250px] rounded-2xl overflow-hidden"
+      className="relative h-[250px] rounded-2xl overflow-hidden cursor-pointer"
       onClick={handleNavigate}
     >
       <img
         src={pet.image}
         alt={pet.name}
-        className="bg-light-gray object-cover w-full h-full cursor-pointer"
+        className="bg-light-gray object-cover w-full h-full"
       />
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 min-w-2/3 max-w-[90%] truncate text-center bg-accent-light rounded-full px-3 py-1 text-lg">
+      <div className="absolute  bottom-2 left-1/2 -translate-x-1/2 min-w-2/3 max-w-[90%] truncate text-center bg-accent-light rounded-full px-3 py-1 text-lg">
         {pet.name}, {pet.age}
       </div>
     </div>

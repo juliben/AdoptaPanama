@@ -49,7 +49,7 @@ export const CarrouselDiv = () => {
       </div>
       <button
         onClick={() => navigate("/listings")}
-        className="outline-1 rounded-full px-5 py-2 outline-gray-400 self-center"
+        className="outline-1 rounded-full px-5 py-2 outline-gray-400 self-center hover:cursor-pointer"
       >
         Ver todos
       </button>

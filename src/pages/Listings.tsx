@@ -62,7 +62,11 @@ export const Listings = () => {
         sortMenuVisible={sortMenuVisible}
       />
       {sortMenuVisible && (
-        <SortMenu sortMethod={sortMethod} setSortMethod={setSortMethod} />
+        <SortMenu
+          sortMethod={sortMethod}
+          setSortMethod={setSortMethod}
+          setSortMenuVisible={setSortMenuVisible}
+        />
       )}
       {loading ? (
         <SyncLoader

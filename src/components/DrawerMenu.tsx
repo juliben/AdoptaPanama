@@ -1,9 +1,9 @@
-import { IoClose } from "react-icons/io5";
-import { motion } from "motion/react";
-import { useNavigate, useLocation } from "react-router-dom";
 import { useContext } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { motion } from "motion/react";
+import { IoClose } from "react-icons/io5";
+
 import { AuthContext } from "../contexts/AuthContext";
-import { signOut } from "../supabase/auth";
 
 type Props = {
   onClick: () => void;
@@ -13,12 +13,6 @@ export const DrawerMenu = ({ onClick }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
   const user = useContext(AuthContext);
-
-  const handleSignOut = async () => {
-    await signOut();
-    console.log("Signed out");
-    onClick();
-  };
 
   return (
     <motion.div
