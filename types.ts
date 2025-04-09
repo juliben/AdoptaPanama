@@ -1,5 +1,5 @@
 export type User = {
-  id: number;
+  id: string;
   email: string;
   created_ai: string;
   display_name: string;
@@ -10,13 +10,13 @@ export type User = {
 };
 
 export type Pet = {
-  id: number;
+  id: string;
   created_at: string;
   species: string;
   name: string;
   age: number;
   breed: string;
-  images: string[];
+  image: string;
   type: string;
   description: string;
   user: number; // ID of the user who listed the pet

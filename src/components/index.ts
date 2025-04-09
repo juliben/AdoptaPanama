@@ -11,3 +11,5 @@ export * from "./PinkDiv";
 export * from "./HamburgerMenu";
 export * from "./TopRow";
 export * from "./CategoryRow";
+export * from "./AnimalsGrid";
+export * from "./SortMenu";

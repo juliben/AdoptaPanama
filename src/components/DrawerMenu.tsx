@@ -60,11 +60,6 @@ export const DrawerMenu = ({ onClick }: Props) => {
         <p className="menu-text" onClick={() => navigate("/reports")}>
           Mascotas Perdidas
         </p>
-        {user && (
-          <p className="menu-text mt-10" onClick={handleSignOut}>
-            Cerrar sesión
-          </p>
-        )}
       </div>
     </motion.div>
   );

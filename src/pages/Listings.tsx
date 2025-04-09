@@ -1,12 +1,13 @@
-import { SortMenu } from "./../components/SortMenu";
-import { ListingsComponent } from "./../components/ListingsComponent";
-import { useState, useEffect, useContext } from "react";
-import { TopRow, CategoryRow } from "../components";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { AuthContext } from "../contexts/AuthContext";
+import { TopRow, CategoryRow, AnimalsGrid, SortMenu } from "../components";
+import { useFetchAnimals } from "../hooks";
+import { SyncLoader } from "react-spinners";
 
 export const Listings = () => {
-  const [animals, setAnimals] = useState<any[]>([]);
+  const { animals, loading } = useFetchAnimals();
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [sortMenuVisible, setSortMenuVisible] = useState(false);
   const navigate = useNavigate();
@@ -34,8 +35,13 @@ export const Listings = () => {
         sortMenuVisible={sortMenuVisible}
       />
       {sortMenuVisible && <SortMenu />}
-      {animals.length > 0 ? (
-        <ListingsComponent />
+      {loading ? (
+        <SyncLoader
+          color="#dff5b2"
+          className="absolute top-1/2 right-1/2 translate-x-1/2 translate-y-1/2"
+        />
+      ) : animals.length > 0 ? (
+        <AnimalsGrid animals={animals} />
       ) : (
         <div className="flex-center mt-10 flex-col">
           <p>No hay animalitos en adopción.</p>
