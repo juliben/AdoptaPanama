@@ -49,7 +49,7 @@ export const DrawerMenu = ({ onClick }: Props) => {
           </p>
         )}
         <p className="menu-text " onClick={() => navigate("/listings")}>
-          Adoptar
+          Adopciones
         </p>
         <p className="menu-text" onClick={() => navigate("/reports")}>
           Mascotas Perdidas

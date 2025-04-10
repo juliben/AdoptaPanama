@@ -19,6 +19,7 @@ export const Fork = () => {
   return (
     <div className="h-screen">
       <TopRow />
+
       <motion.div
         whileTap={{ scale: 0.97 }}
         onClick={() => navigate("/listings")}
@@ -28,7 +29,7 @@ export const Fork = () => {
           src="/blob-scene-pink.png"
           className="w-full h-full object-cover"
         />
-        <h4 className="absolute text-xl">Quiero adoptar</h4>
+        <h4 className="absolute text-xl">Adopciones</h4>
       </motion.div>
       <motion.div
         whileTap={{ scale: 0.97 }}
@@ -39,20 +40,7 @@ export const Fork = () => {
           src="/blob-scene-green.png"
           className="w-full h-full object-cover"
         />
-        <h4 className="absolute text-xl">Quiero publicar un animal</h4>
-      </motion.div>
-      <motion.div
-        whileTap={{ scale: 0.97 }}
-        onClick={handleNavigate}
-        className="relative flex-center h-[20%] bg-pastel-purple mt-5 mx-4 rounded-3xl shadow  overflow-hidden"
-      >
-        <img
-          src="/blob-scene-gray2.png"
-          className="w-full h-full object-cover "
-        />
-        <h4 className="absolute text-center text-xl">
-          Quiero reportar una mascota perdida
-        </h4>
+        <h4 className="absolute text-xl">Mascotas perdidas</h4>
       </motion.div>
     </div>
   );

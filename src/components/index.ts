@@ -13,3 +13,5 @@ export * from "./TopRow";
 export * from "./CategoryRow";
 export * from "./AnimalsGrid";
 export * from "./SortMenu";
+export * from "./FloatingButton";
+export * from "./Wave";

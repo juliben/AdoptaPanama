@@ -8,10 +8,10 @@ import supabase from "../supabase/supabase";
 import { SyncLoader } from "react-spinners";
 
 export const CreateListing = () => {
-  const [image, setImage] = useState<File | null>(null);
+  const [images, setImages] = useState<File[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const imagePublicUrlRef = useRef<string | undefined>(undefined);
+  const imagePublicUrlsRef = useRef<string[] | null>(null);
   const { id, email } = useContext(AuthContext) ?? {};
   const navigate = useNavigate();
 
@@ -23,26 +23,33 @@ export const CreateListing = () => {
   }, []);
 
   const handleImagePick = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      setImage(file);
+    const selectedImages = event.target.files;
+    if (!selectedImages) {
+      return;
     }
+    const fileArray = Array.from(selectedImages).slice(0, 5);
+    setImages(fileArray);
   };
 
-  const uploadImage = async () => {
-    if (image) {
-      const filePath = `pets/${id}_${Date.now()}`;
-      const { data, error } = await supabase.storage
-        .from("images")
-        .upload(filePath, image, {
-          cacheControl: "3600",
-        });
-      if (error) {
-        console.log(error);
-      }
-      if (data) {
-        imagePublicUrlRef.current = await getPublicUrl(data.path);
-      }
+  const uploadImages = async () => {
+    if (images.length > 0) {
+      const uploadPromises = images.map(async (image, index) => {
+        const filePath = `pets/${id}_${Date.now()}_${index}`;
+        const { data, error } = await supabase.storage
+          .from("images")
+          .upload(filePath, image, {
+            cacheControl: "3600",
+          });
+        if (error) {
+          console.log(error);
+        }
+        if (data) {
+          const publicUrl = await getPublicUrl(data.path);
+          return publicUrl ?? null;
+        }
+      });
+      const publicUrls = await Promise.all(uploadPromises);
+      imagePublicUrlsRef.current = publicUrls.filter(Boolean) as string[];
     }
   };
 
@@ -60,7 +67,7 @@ export const CreateListing = () => {
   const handleSubmit = async (values: FormikValues) => {
     setError(null);
     setLoading(true);
-    await uploadImage();
+    await uploadImages();
 
     const allValuesOk = Object.values(values).every((value) => value !== "");
     if (!allValuesOk) {
@@ -77,7 +84,7 @@ export const CreateListing = () => {
         sex: values.sex,
         location: values.location,
         description: values.description,
-        image: imagePublicUrlRef.current,
+        images: imagePublicUrlsRef.current,
         user: id,
         email: email,
       });
@@ -185,8 +192,9 @@ export const CreateListing = () => {
                 </label>
               </div>
 
-              <p>Foto</p>
+              <p>Añade hasta cinco fotos</p>
               <input
+                multiple
                 onChange={handleImagePick}
                 type="file"
                 accept="image/*"

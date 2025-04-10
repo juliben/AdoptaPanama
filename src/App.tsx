@@ -28,8 +28,7 @@ function App() {
           <Route path="/reports" element={<Reports />} />
           <Route path="/create-report" element={<CreateReport />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/pet-details:id" element={<PetDetails />} />
-          <Route path="/pet-details:id" element={<PetDetails />} />
+          <Route path="/pet-details/:id" element={<PetDetails />} />
           <Route path="/way" element={<Fork />} />
         </Routes>
       </Router>

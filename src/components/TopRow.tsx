@@ -6,7 +6,7 @@ export const TopRow = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
 
   return (
-    <>
+    <div className="z-10">
       <TopMenu />
       <HamburgerMenu onClick={() => setDrawerVisible(true)} />{" "}
       <AnimatePresence>
@@ -14,6 +14,6 @@ export const TopRow = () => {
           <DrawerMenu onClick={() => setDrawerVisible(false)} />
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };

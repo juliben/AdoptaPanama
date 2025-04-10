@@ -14,10 +14,11 @@ export type Pet = {
   created_at: string;
   species: string;
   sex: "macho" | "hembra";
+  location: string;
   name: string;
   age: number;
   breed: string;
-  image: string;
+  images: string[];
   type: string;
   description: string;
   user: number; // ID of the user who listed the pet

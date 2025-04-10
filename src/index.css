@@ -127,4 +127,13 @@ p {
   .flip {
     @apply scale-x-[-1];
   }
+  .test {
+    @apply bg-red-500;
+  }
+  .test1 {
+    @apply bg-blue-500;
+  }
+  .test2 {
+    @apply bg-green-500;
+  }
 }
