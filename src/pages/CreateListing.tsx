@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState, useRef } from "react";
 import { motion } from "motion/react";
-import { TopRow } from "../components";
+import { BackButton, TopRow } from "../components";
 import { AuthContext } from "../contexts/AuthContext";
 import { Formik, FormikValues } from "formik";
 import { useNavigate } from "react-router-dom";
 import supabase from "../supabase/supabase";
 import { SyncLoader } from "react-spinners";
+import { FaChevronLeft } from "react-icons/fa";
 
 export const CreateListing = () => {
   const [images, setImages] = useState<File[]>([]);
@@ -108,8 +109,18 @@ export const CreateListing = () => {
   return (
     <div>
       <TopRow />
-      <div className="flex flex-col p-7  h-screen bg-light-gray rounded-t-3xl mt-4">
-        <h3 className=" text-dark-primary">Crear una publicación</h3>
+      <div className="flex flex-col p-7 bg-light-gray rounded-t-3xl mt-2">
+        <div className="flex flex-row items-center justify-between">
+          <h3 className=" text-dark-primary font-sans">
+            Crear una publicación
+          </h3>
+          <button
+            onClick={() => navigate(-1)}
+            className="outline rounded-full px-2 py-1 hover:cursor-pointer text-dark-primary"
+          >
+            Cancelar
+          </button>
+        </div>
 
         <Formik
           initialValues={{

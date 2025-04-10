@@ -7,7 +7,7 @@ export const BackButton = () => {
     <FaChevronLeft
       size={30}
       onClick={() => navigate(-1)}
-      className="cursor-pointer ml-3.5 mt-5 text-dark-primary"
+      className="cursor-pointer  text-dark-primary z-3 hover:cursor-pointer"
     />
   );
 };
