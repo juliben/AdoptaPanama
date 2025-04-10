@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import supabase from "../supabase/supabase";
-import { TopRow, Wave, FloatingButton } from "../components";
+import { TopRow, Wave, FloatingButton, BackButton } from "../components";
 import { Pet } from "../../types";
 
 import { IoIosPin } from "react-icons/io";
@@ -53,10 +53,10 @@ export const PetDetails = () => {
 
   return (
     <>
-      <TopRow />
       <Wave />
+      <BackButton />
 
-      <div className="flex flex-col items-center mt-10">
+      <div className="flex flex-col items-center mt-5">
         <img
           src={animal.images[0]}
           alt={animal.name}

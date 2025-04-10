@@ -15,3 +15,4 @@ export * from "./AnimalsGrid";
 export * from "./SortMenu";
 export * from "./FloatingButton";
 export * from "./Wave";
+export * from "./BackButton";
