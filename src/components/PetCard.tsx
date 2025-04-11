@@ -27,9 +27,9 @@ export const PetCard = ({ animal, index }: Props) => {
           transform: `${index === 1 ? "translateY(4%)" : ""}`,
         }}
       >
-        {animal ? (
+        {animal && animal.images ? (
           <img
-            src={animal.image}
+            src={animal.images[0]}
             alt={animal.name}
             className="w-full object-cover h-full"
           />

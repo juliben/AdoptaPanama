@@ -1,39 +1,20 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import supabase from "../supabase/supabase";
-import { TopRow, Wave, FloatingButton, BackButton } from "../components";
-import { Pet } from "../../types";
+import {
+  TopRow,
+  Wave,
+  FloatingButton,
+  BackButton,
+  EmblaCarousel,
+} from "../components";
+import { useFetchAnimalById } from "../hooks/";
 
-import { IoIosPin } from "react-icons/io";
-import { IoMdFemale } from "react-icons/io";
-import { IoMdMale } from "react-icons/io";
+import { IoMdFemale, IoMdMale, IoIosPin } from "react-icons/io";
 import { SyncLoader } from "react-spinners";
 
 export const PetDetails = () => {
   const { id } = useParams();
-  const [animal, setAnimal] = useState<Pet | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true);
-    const fetchAnimal = async () => {
-      try {
-        const { data, error } = await supabase
-          .from("pets")
-          .select("*")
-          .eq("id", id)
-          .single();
-        if (error) throw error;
-        setAnimal(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchAnimal();
-  }, [id]);
+  const { animal, loading } = useFetchAnimalById({ id });
 
   if (loading) {
     return (
@@ -57,15 +38,9 @@ export const PetDetails = () => {
       <BackButton />
 
       <div className="flex flex-col items-center mt-5">
-        <img
-          src={animal.images[0]}
-          alt={animal.name}
-          className={`min-w-[70%] max-h-[50vh] object-cover rounded-2xl shadow mb-3 z-2  border-2 ${
-            animal.sex === "hembra" ? "border-pink-300" : "border-blue-300"
-          }`}
-        />
+        <EmblaCarousel slides={animal.images} />
 
-        <div className="flex flex-col flex-start gap-1.5 z-1  w-[70%]">
+        <div className="flex flex-col flex-start gap-1.5 z-1  w-[70%] mt-5">
           <div className="flex flex-row">
             <h3 className="font-primary-semibold mr-2">
               {animal.name}, {animal.age}
