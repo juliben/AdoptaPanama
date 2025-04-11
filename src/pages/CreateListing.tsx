@@ -114,12 +114,13 @@ export const CreateListing = () => {
           <h3 className=" text-dark-primary font-sans">
             Crear una publicación
           </h3>
-          <button
+          <motion.button
+            whileTap={{ scale: 0.97 }}
             onClick={() => navigate(-1)}
             className="outline rounded-full px-2 py-1 hover:cursor-pointer text-dark-primary"
           >
             Cancelar
-          </button>
+          </motion.button>
         </div>
 
         <Formik

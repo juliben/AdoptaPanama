@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { TopRow } from "../components";
 import { AuthContext } from "../contexts/AuthContext";
 import { FaUser } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosList } from "react-icons/io";
 import { signOut } from "../supabase/auth";
 import { useNavigate } from "react-router-dom";
+import { MenuOption } from "../components/MenuOption";
 
 export const Profile = () => {
   const navigate = useNavigate();
@@ -35,22 +36,23 @@ export const Profile = () => {
           </div>
         </div>
         <div className="bg-light-gray h-screen mt-5 rounded-t-4xl">
-          <div className="flex flex-col p-6 gap-10 pt-10 ">
-            <div className="flex flex-row items-center gap-2">
-              <IoIosList size={25} />
-              <p>Mis publicaciones</p>
-            </div>
-            <div className="flex flex-row items-center gap-2">
-              <IoSettingsOutline size={25} />
-              <p>Configuración</p>
-            </div>
-            <div
-              className="flex flex-row items-center gap-2 text-red-400"
+          <div className="relative flex flex-col p-3 gap-3 pt-10 ">
+            <MenuOption
+              title="Mis publicaciones"
+              icon={<IoIosList size={25} />}
+              onClick={() => navigate("/my-posts")}
+            />
+
+            <MenuOption
+              title="Configuración"
+              icon={<IoSettingsOutline size={25} />}
+              onClick={() => navigate("/settings")}
+            />
+            <MenuOption
+              title="Cerrar sesión"
+              icon={<AiOutlineLogout size={25} />}
               onClick={handleSignOut}
-            >
-              <AiOutlineLogout size={25} />
-              <p>Cerrar sesión</p>
-            </div>
+            />
           </div>
         </div>
       </div>

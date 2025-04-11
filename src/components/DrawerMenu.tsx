@@ -23,11 +23,13 @@ export const DrawerMenu = ({ onClick }: Props) => {
       className="mobile bg-dark-primary h-screen fixed w-[45%] top-0  right-0 z-50 shadow-2xl"
     >
       <div className="flex flex-col items-end m-3">
-        <IoClose
-          size={40}
-          className="text-white mb-10 hover:cursor-pointer"
-          onClick={onClick}
-        />
+        <motion.div whileTap={{ scale: 0.95 }}>
+          <IoClose
+            size={40}
+            className="text-white mb-10 hover:cursor-pointer"
+            onClick={onClick}
+          />
+        </motion.div>
         {location.pathname !== "/" && (
           <p className="menu-text" onClick={() => navigate("/")}>
             Inicio

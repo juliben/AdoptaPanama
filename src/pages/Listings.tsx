@@ -88,14 +88,15 @@ export const Listings = () => {
       ) : (
         <div className="flex-center mt-10 flex-col">
           <p>No hay animalitos en adopción.</p>
-          <button
+          <motion.button
+            whileTap={{ scale: 0.97 }}
             className="bg-accent-light font-primary-semibold py-3 px-4 rounded-full mt-6"
             onClick={handleNavigate}
           >
             {user
               ? "Hacer una publicación"
               : "Iniciar sesión para hacer una publicación"}
-          </button>
+          </motion.button>
         </div>
       )}
     </>

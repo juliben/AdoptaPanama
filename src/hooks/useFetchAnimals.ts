@@ -12,7 +12,9 @@ export const useFetchAnimals = () => {
       try {
         const { data, error } = await supabase.from("pets").select("*");
         if (error) throw error;
-        setAnimals(data);
+
+        const activeAnimals = data.filter((post: Pet) => !post.adopted);
+        setAnimals(activeAnimals || []);
       } catch (error) {
         console.log(error);
       } finally {

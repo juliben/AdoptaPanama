@@ -17,9 +17,13 @@ export const HamburgerMenu = ({ onClick }: Props) => {
           transition: { duration: 1, ease: "easeOut" },
         }}
       />
-      <button onClick={onClick} className="hover:cursor-pointer">
+      <motion.button
+        whileTap={{ scale: 0.93 }}
+        onClick={onClick}
+        className="hover:cursor-pointer"
+      >
         <LuMenu size={30} />
-      </button>
+      </motion.button>
     </div>
   );
 };
