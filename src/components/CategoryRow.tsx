@@ -18,24 +18,28 @@ export const CategoryRow = ({
       <p
         onClick={() => setSelectedCategory("all")}
         className={isSelected("all") ? "category-selected" : "category"}
+        style={{ fontSize: "1.0rem" }}
       >
         Todos
       </p>
       <p
         onClick={() => setSelectedCategory("dog")}
         className={isSelected("dog") ? "category-selected" : "category"}
+        style={{ fontSize: "1.0rem" }}
       >
         Perros
       </p>
       <p
         onClick={() => setSelectedCategory("cat")}
         className={isSelected("cat") ? "category-selected" : "category"}
+        style={{ fontSize: "1.0rem" }}
       >
         Gatos
       </p>
       <p
         onClick={() => setSelectedCategory("other")}
         className={isSelected("other") ? "category-selected" : "category"}
+        style={{ fontSize: "1.0rem" }}
       >
         Otros
       </p>
