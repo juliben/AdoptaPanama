@@ -12,7 +12,7 @@ export const PinkDiv = () => {
         <h3>Mascotas perdidas</h3>
         <p>Publica tu mascota perdida o reporta mascotas vistas</p>
         <motion.button
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 0.95 }}
           className="button-pill-small mt-2"
         >
           Ir

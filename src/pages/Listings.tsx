@@ -90,12 +90,12 @@ export const Listings = () => {
           <p>No hay animalitos en adopción.</p>
           <motion.button
             whileTap={{ scale: 0.97 }}
-            className="bg-accent-light font-primary-semibold py-3 px-4 rounded-full mt-6"
+            className="bg-accent-light font-primary-semibold py-3 px-6 rounded-full mt-6"
             onClick={handleNavigate}
           >
             {user
               ? "Hacer una publicación"
-              : "Iniciar sesión para hacer una publicación"}
+              : "Inicia sesión para hacer una publicación"}
           </motion.button>
         </div>
       )}

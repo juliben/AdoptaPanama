@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { FaSort } from "react-icons/fa";
 
 type Props = {
@@ -43,11 +44,13 @@ export const CategoryRow = ({
       >
         Otros
       </p>
-      <FaSort
-        size={25}
-        onClick={() => setSortMenuVisible(!sortMenuVisible)}
-        className="hover:cursor-pointer"
-      />
+      <motion.div whileTap={{ scale: 0.9 }}>
+        <FaSort
+          size={25}
+          onClick={() => setSortMenuVisible(!sortMenuVisible)}
+          className="hover:cursor-pointer"
+        />
+      </motion.div>
     </div>
   );
 };

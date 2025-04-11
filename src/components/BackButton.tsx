@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export const BackButton = () => {
   const navigate = useNavigate();
   return (
-    <motion.div whileTap={{ scale: 0.98 }}>
+    <motion.div whileTap={{ scale: 0.99 }}>
       <FaChevronLeft
         size={30}
         onClick={() => navigate(-1)}

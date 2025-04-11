@@ -21,7 +21,7 @@ export const Fork = () => {
       <TopRow />
 
       <motion.div
-        whileTap={{ scale: 0.97 }}
+        whileTap={{ scale: 0.98 }}
         onClick={() => navigate("/listings")}
         className="flex-center h-[20%] overflow-hidden bg-soft-pink mt-7 mx-4 rounded-3xl shadow"
       >
@@ -32,7 +32,7 @@ export const Fork = () => {
         <h4 className="absolute text-xl">Adopciones</h4>
       </motion.div>
       <motion.div
-        whileTap={{ scale: 0.97 }}
+        whileTap={{ scale: 0.98 }}
         onClick={handleNavigate}
         className="relative  text-center flex-center h-[20%] bg-pastel-purple mt-5 mx-4 rounded-3xl shadow overflow-hidden"
       >

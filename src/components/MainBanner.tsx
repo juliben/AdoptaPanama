@@ -39,7 +39,7 @@ export function MainBanner() {
           scale: 1.1,
         }}
         whileTap={{
-          scale: 0.9,
+          scale: 0.95,
         }}
         className="button-pill -rotate-13 absolute bottom-[10%] left-[10%]  sm:bottom-[14%] sm:left-[33%] hover:cursor-pointer"
       >

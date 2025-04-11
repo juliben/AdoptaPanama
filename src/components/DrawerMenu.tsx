@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { IoClose } from "react-icons/io5";
 
 import { AuthContext } from "../contexts/AuthContext";
+import { ClickableText } from "./ClickableText";
 
 type Props = {
   onClick: () => void;
@@ -31,31 +32,29 @@ export const DrawerMenu = ({ onClick }: Props) => {
           />
         </motion.div>
         {location.pathname !== "/" && (
-          <p className="menu-text" onClick={() => navigate("/")}>
-            Inicio
-          </p>
+          <ClickableText onClick={() => navigate("/")}>Inicio</ClickableText>
         )}
         {user && (
-          <p className="menu-text" onClick={() => navigate("/profile")}>
+          <ClickableText onClick={() => navigate("/profile")}>
             Mi perfil
-          </p>
+          </ClickableText>
         )}
         {!user && (
-          <p className="menu-text" onClick={() => navigate("/register")}>
+          <ClickableText onClick={() => navigate("/register")}>
             Crear cuenta
-          </p>
+          </ClickableText>
         )}
         {!user && (
-          <p className="menu-text" onClick={() => navigate("/sign-in")}>
+          <ClickableText onClick={() => navigate("/sign-in")}>
             Iniciar sesión
-          </p>
+          </ClickableText>
         )}
-        <p className="menu-text " onClick={() => navigate("/listings")}>
+        <ClickableText onClick={() => navigate("/listings")}>
           Adopciones
-        </p>
-        <p className="menu-text" onClick={() => navigate("/reports")}>
+        </ClickableText>
+        <ClickableText onClick={() => navigate("/reports")}>
           Mascotas Perdidas
-        </p>
+        </ClickableText>
       </div>
     </motion.div>
   );
