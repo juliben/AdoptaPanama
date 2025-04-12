@@ -3,7 +3,7 @@ import { TopRow } from "../components";
 import { AuthContext } from "../contexts/AuthContext";
 import { FaUser } from "react-icons/fa";
 import { AiOutlineLogout } from "react-icons/ai";
-import { IoSettingsOutline } from "react-icons/io5";
+// import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosList } from "react-icons/io";
 import { signOut } from "../supabase/auth";
 import { useNavigate } from "react-router-dom";
@@ -42,12 +42,12 @@ export const Profile = () => {
               icon={<IoIosList size={25} />}
               onClick={() => navigate("/my-posts")}
             />
-
+            {/* 
             <MenuOption
               title="Configuración"
               icon={<IoSettingsOutline size={25} />}
               onClick={() => navigate("/settings")}
-            />
+            /> */}
             <MenuOption
               title="Cerrar sesión"
               icon={<AiOutlineLogout size={25} />}
