@@ -2,6 +2,7 @@ import { TopRow } from "./../components/TopRow";
 
 import { MainBanner, PinkDiv } from "../components";
 import { CarrouselDiv } from "../components/CarrouselDiv";
+import { Analytics } from "@vercel/analytics/react";
 
 export const Home = () => {
   return (
@@ -10,6 +11,7 @@ export const Home = () => {
       <MainBanner />
       <PinkDiv />
       <CarrouselDiv />
+      <Analytics />
     </div>
   );
 };
