@@ -1,7 +1,6 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import supabase from "../supabase/supabase";
 
-import { AuthContext } from "../contexts/AuthContext";
 import { Report } from "../../types";
 
 export const useFetchReports = () => {
