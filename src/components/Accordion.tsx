@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { LuPlus, LuMinus } from "react-icons/lu";
 
 export const Accordion = () => {
-  const [activeQuestion, setActiveQuestion] = useState([]);
+  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
   const questions = [
     {
@@ -32,9 +32,47 @@ export const Accordion = () => {
     {
       id: 5,
       question: "¿Cómo me puedo contactar con ustedes?",
-      answer: "Puedes enviar un correo a julietaben16@gmail",
+      answer: "Puedes enviar un correo a julietaben16@gmail.com",
     },
   ];
 
-  return null;
+  return (
+    <div className="h-[60vh] mx-2 mt-8">
+      <h3 className="my-5">Preguntas frecuentes</h3>
+      {questions.map((question) => (
+        <>
+          <div
+            onClick={() =>
+              setActiveQuestion(
+                activeQuestion === question.id ? null : question.id
+              )
+            }
+            key={question.id}
+            className="faq-container "
+          >
+            <div>{question.question}</div>
+            {activeQuestion === question.id ? (
+              <LuMinus className="min-h-5 min-w-5" />
+            ) : (
+              <LuPlus className="min-h-5 min-w-5" />
+            )}
+          </div>
+
+          <AnimatePresence>
+            {activeQuestion === question.id && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                // exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.2, ease: "linear" }}
+                className="faq-answer"
+              >
+                {question.answer}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </>
+      ))}
+    </div>
+  );
 };

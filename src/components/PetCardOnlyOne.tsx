@@ -11,9 +11,7 @@ export const PetCardOnlyOne = ({ animal }: Props) => {
   return (
     <>
       <div className="relative h-[70%] min-h-[500px] bg-light-gray flex flex-col rounded-3xl mx-2 py-8 px-3">
-        <h2 className="font-semibold text-3xl pl-3 mb-5">
-          Animales en adopción
-        </h2>
+        <h3 className="font-semibold pl-3 mb-5">Animales en adopción</h3>
         <div
           onClick={() => navigate(`/pet-details/${animal.id}`)}
           className="relative flex-center w-fit self-center "

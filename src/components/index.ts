@@ -23,5 +23,7 @@ export * from "./PetCard";
 export * from "./PetCardOnlyOne";
 export * from "./EmblaCarousel";
 export * from "./PostContainer";
+export * from "./CarrouselDiv";
 export * from "./ReportContainer";
 export * from "./ClickableText";
+export * from "./Accordion";
