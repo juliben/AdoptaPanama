@@ -3,7 +3,7 @@ import { TopRow } from "../components/TopRow";
 import { Formik, FormikValues } from "formik";
 import * as Yup from "yup";
 import { signUp } from "../supabase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -106,9 +106,9 @@ export const Register = () => {
       </div>
       <div className="flex flex-row justify-center items-center gap-1.5 mt-7">
         <p>¿Ya tienes una cuenta?</p>
-        <a href="/sign-in">
+        <Link to="/sign-in">
           <p className="text-primary">Iniciar sesión</p>
-        </a>
+        </Link>
       </div>
       {/* <button onClick={() => signOut()} className="button-submit mx-2">
         Debug
