@@ -16,7 +16,7 @@ export const Register = () => {
       .min(6, "La contraseña debe tener al menos 6 caracteres.")
       .required("Se requiere una contraseña."),
     confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password"), null], "Las contraseñas no coinciden.")
+      .oneOf([Yup.ref("password")], "Las contraseñas no coinciden.")
       .required("Se requiere confirmar la contraseña."),
   });
 

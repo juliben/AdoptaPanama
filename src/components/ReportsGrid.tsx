@@ -18,7 +18,6 @@ export const ReportsGrid = ({ reports }: Props) => {
         >
           <img
             src={report.images[0]}
-            alt={report.title}
             className="bg-light-gray object-cover w-full h-full"
           />
 
