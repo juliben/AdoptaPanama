@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 
 import {
   TopRow,
-  Wave,
   FloatingButton,
   BackButton,
   EmblaCarousel,
@@ -35,10 +34,8 @@ export const PetDetails = () => {
   return (
     <>
       <BackButton />
-
       <div className="flex flex-col items-center mt-5">
         <EmblaCarousel slides={animal.images} />
-
         <div className="flex flex-col flex-start gap-1.5 z-1  w-[70%] mt-5 sm:w-[50%]  ">
           <div className="flex flex-row">
             <h3 className="font-primary-semibold mr-2">
