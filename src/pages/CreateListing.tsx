@@ -128,7 +128,7 @@ export const CreateListing = () => {
             species: "",
             sex: "",
             name: "",
-            age: 0,
+            age: "",
             location: "",
             description: "",
             contact: "",
