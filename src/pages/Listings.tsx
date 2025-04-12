@@ -86,7 +86,7 @@ export const Listings = () => {
         </div>
       ) : (
         <div className="flex-center mt-10 flex-col">
-          <p>No hay animalitos en adopción.</p>
+          <p>No hay animalitos publicados.</p>
           <motion.button
             whileTap={{ scale: 0.97 }}
             className="bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6"
