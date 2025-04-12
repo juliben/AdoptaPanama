@@ -1,7 +1,5 @@
 import { TopRow } from "../components";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../contexts/AuthContext";
-import { useContext } from "react";
 import { motion } from "motion/react";
 
 export const Fork = () => {

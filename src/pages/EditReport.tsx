@@ -6,7 +6,6 @@ import {
   EditReportFloatingButton,
   BackButton,
   EmblaCarousel,
-  FloatingButton,
 } from "../components";
 import { useFetchReportById } from "../hooks";
 

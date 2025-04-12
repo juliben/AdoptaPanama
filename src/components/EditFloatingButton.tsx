@@ -1,4 +1,3 @@
-import { ConfirmModal } from "./ConfirmModal";
 import { EditMenuButtons } from "./EditMenuButtons";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";

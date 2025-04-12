@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { TopRow } from "../components";
 import { AuthContext } from "../contexts/AuthContext";
 import { FaUser } from "react-icons/fa";
@@ -8,7 +8,6 @@ import { IoIosList } from "react-icons/io";
 import { signOut } from "../supabase/auth";
 import { useNavigate } from "react-router-dom";
 import { MenuOption } from "../components/MenuOption";
-
 
 export const Profile = () => {
   const navigate = useNavigate();

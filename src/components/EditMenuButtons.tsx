@@ -1,6 +1,5 @@
 import { TiDelete } from "react-icons/ti";
 import { IoIosHeart } from "react-icons/io";
-import { MdEdit } from "react-icons/md";
 import { motion } from "motion/react";
 
 type Props = {

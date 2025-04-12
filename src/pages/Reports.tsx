@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 import { TopRow } from "../components";
 import { useFetchReports } from "../hooks";
-import { Report } from "../../types";
 
 import { SyncLoader } from "react-spinners";
 

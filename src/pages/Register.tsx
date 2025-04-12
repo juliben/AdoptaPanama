@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { TopRow } from "../components/TopRow";
 import { Formik, FormikValues } from "formik";
 import * as Yup from "yup";
-import { signIn, signOut, signUp } from "../supabase/auth";
+import { signUp } from "../supabase/auth";
 import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
