@@ -62,11 +62,8 @@ export const EditListing = () => {
             )}
             <p>{animal.sex.charAt(0).toUpperCase() + animal.sex.slice(1)}</p>
           </div>
-          <EditFloatingButton />
-          <p className="text-gray-600 rounded-2xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            officia esse illum qui
-          </p>
+          <EditFloatingButton id={animal.id} />
+          <p className="text-gray-600 rounded-2xl">{animal.description}</p>
         </div>
       </div>
     </>

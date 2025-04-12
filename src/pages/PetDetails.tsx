@@ -62,11 +62,8 @@ export const PetDetails = () => {
             )}
             <p>{animal.sex.charAt(0).toUpperCase() + animal.sex.slice(1)}</p>
           </div>
-          <FloatingButton />
-          <p className="text-gray-600 rounded-2xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            officia esse illum qui
-          </p>
+          <FloatingButton contact={animal.contact} />
+          <p className="text-gray-600 rounded-2xl">{animal.description}</p>
         </div>
       </div>
     </>

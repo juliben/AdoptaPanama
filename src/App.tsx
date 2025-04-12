@@ -11,6 +11,8 @@ import {
   Fork,
   MyPosts,
   EditListing,
+  ReportDetails,
+  EditReport,
 } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -31,6 +33,7 @@ function App() {
             <Route path="/listings" element={<Listings />} />
             <Route path="/create-listing" element={<CreateListing />} />
             <Route path="/reports" element={<Reports />} />
+
             <Route path="/create-report" element={<CreateReport />} />
             <Route path="/contact" element={<Contact />} />
             <Route
@@ -47,6 +50,19 @@ function App() {
               }
             />
             <Route
+              path="/report-details/:id"
+              element={
+                <motion.div
+                  initial={{ translateX: "100%" }}
+                  animate={{ translateX: "0%" }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  exit={{ translateX: ["100%"], opacity: 0 }}
+                >
+                  <ReportDetails />
+                </motion.div>
+              }
+            />
+            <Route
               path="/edit-listing/:id"
               element={
                 <motion.div
@@ -56,6 +72,19 @@ function App() {
                   exit={{ translateX: ["100%"], opacity: 0 }}
                 >
                   <EditListing />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/edit-report/:id"
+              element={
+                <motion.div
+                  initial={{ translateX: "100%" }}
+                  animate={{ translateX: "0%" }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  exit={{ translateX: ["100%"], opacity: 0 }}
+                >
+                  <EditReport />
                 </motion.div>
               }
             />

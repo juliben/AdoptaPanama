@@ -1,31 +1,30 @@
 import { TiDelete } from "react-icons/ti";
 import { IoIosHeart } from "react-icons/io";
-import { MdEdit } from "react-icons/md";
 import { motion } from "motion/react";
 
 type Props = {
   setOpen: (open: boolean) => void;
-  setShowAdoptedConfirm: (show: boolean) => void;
+  setShowFoundConfirm: (show: boolean) => void;
   setShowEdit: (show: boolean) => void;
   setShowDeleteConfirm: (show: boolean) => void;
 };
 
-export const EditMenuButtons = ({
+export const EditReportMenuButtons = ({
   setOpen,
-  setShowAdoptedConfirm,
+  setShowFoundConfirm,
   setShowDeleteConfirm,
 }: Props) => {
   return (
     <div className="flex flex-col items-start gap-5 px-5 py-3 pt-6">
       <motion.div
-        onClick={() => setShowAdoptedConfirm(true)}
+        onClick={() => setShowFoundConfirm(true)}
         whileTap={{
           scale: 0.98,
         }}
         className="flex gap-2 items-center"
       >
         {<IoIosHeart size={22} />}
-        <p>Marcar como adoptado</p>
+        <p>Marcar como encontrado</p>
       </motion.div>
       {/* <motion.div
         onClick={() => setShowEdit(true)}

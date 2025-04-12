@@ -1,5 +1,4 @@
-import { ConfirmModal } from "./ConfirmModal";
-import { EditMenuButtons } from "./EditMenuButtons";
+import { EditReportMenuButtons, ConfirmModal } from ".";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
@@ -12,11 +11,11 @@ type Props = {
   id: string;
 };
 
-export const EditFloatingButton = ({ id }: Props) => {
+export const EditReportFloatingButton = ({ id }: Props) => {
   const user = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
-  const [showAdoptedConfirm, setShowAdoptedConfirm] = useState(false);
+  const [showFoundConfirm, setShowFoundConfirm] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const navigate = useNavigate();
 
@@ -30,7 +29,7 @@ export const EditFloatingButton = ({ id }: Props) => {
 
     try {
       const { error } = await supabase
-        .from("pets")
+        .from("reports")
         .update({ deleted: true })
         .eq("id", id);
 
@@ -45,7 +44,7 @@ export const EditFloatingButton = ({ id }: Props) => {
     }
   };
 
-  const handleAdopted = async () => {
+  const handleFound = async () => {
     if (!user) {
       alert("Por favor, vuelve a iniciar sesión");
       return;
@@ -55,8 +54,8 @@ export const EditFloatingButton = ({ id }: Props) => {
 
     try {
       const { error } = await supabase
-        .from("pets")
-        .update({ adopted: true })
+        .from("reports")
+        .update({ found: true })
         .eq("id", id);
 
       if (error) {
@@ -71,18 +70,18 @@ export const EditFloatingButton = ({ id }: Props) => {
   };
 
   const handleCloseAll = () => {
-    setShowAdoptedConfirm(false);
+    setShowFoundConfirm(false);
     setShowDeleteConfirm(false);
   };
 
-  if (showAdoptedConfirm) {
+  if (showFoundConfirm) {
     return (
       <div className="flex flex-col flex-center gap-5 rounded-4xl px-5 py-5 border border-gray-400  bg-accent-light fixed bottom-[5vh] right-[5vh]">
-        <p>¿Marcar como adoptado?</p>
+        <p>¿Marcar como encontrado?</p>
         <div className="flex gap-10">
           {!loading ? (
             <>
-              <motion.p whileTap={{ scale: 0.98 }} onClick={handleAdopted}>
+              <motion.p whileTap={{ scale: 0.98 }} onClick={handleFound}>
                 Sí
               </motion.p>
               <motion.p whileTap={{ scale: 0.98 }} onClick={handleCloseAll}>
@@ -135,9 +134,9 @@ export const EditFloatingButton = ({ id }: Props) => {
       {!open ? (
         "Editar"
       ) : (
-        <EditMenuButtons
+        <EditReportMenuButtons
           setOpen={setOpen}
-          setShowAdoptedConfirm={setShowAdoptedConfirm}
+          setShowFoundConfirm={setShowFoundConfirm}
           setShowEdit={setOpen}
           setShowDeleteConfirm={setShowDeleteConfirm}
         />

@@ -9,4 +9,6 @@ export * from "./CreateReport";
 export * from "./Contact";
 export * from "./Fork";
 export * from "./MyPosts";
+export * from "./ReportDetails";
 export * from "./EditListing";
+export * from "./EditReport";

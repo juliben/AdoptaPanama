@@ -23,19 +23,20 @@ export type Pet = {
   user: number; // ID of the user who listed the pet
   contact: string;
   adopted: boolean;
+  deleted: boolean;
 };
 
 export type Report = {
-  id: number;
+  id: string;
   created_at: string;
   images: string[];
-  title: string;
   date: string;
   location: string;
   description: string;
   user: string;
   contact: string;
   found: boolean;
+  deleted: boolean;
 };
 
 export type SortMethod =

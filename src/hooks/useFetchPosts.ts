@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
-import { Pet, User } from "../../types";
+import { useState, useEffect, useContext } from "react";
 import supabase from "../supabase/supabase";
 
-type Props = {
-  user: User | null;
-};
-export const useFetchPosts = ({ user }: Props) => {
+import { AuthContext } from "../contexts/AuthContext";
+import { Pet } from "../../types";
+
+export const useFetchPosts = () => {
+  const user = useContext(AuthContext);
   const [posts, setPosts] = useState<Pet[]>([]);
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -14,7 +15,7 @@ export const useFetchPosts = ({ user }: Props) => {
       return;
     }
 
-    const fetchPosts = async () => {
+    const fetchPets = async () => {
       setLoading(true);
       const { data, error } = await supabase
         .from("pets")
@@ -23,15 +24,17 @@ export const useFetchPosts = ({ user }: Props) => {
 
       if (error || !data) {
         console.log(error || "No data received");
-        setPosts([]);
         setLoading(false);
         return;
       }
-      const activePosts = data.filter((post: Pet) => !post.adopted);
-      setPosts(activePosts || []);
+      const activePosts = data.filter(
+        (post: Pet) => !post.adopted && !post.deleted
+      );
+      setPosts(activePosts);
       setLoading(false);
     };
-    fetchPosts();
+    fetchPets();
   }, [user]);
+
   return { posts, loading };
 };

@@ -1,19 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 
-import { Pet } from "../../types";
+import { Report } from "../../types";
 
 import { FaChevronRight } from "react-icons/fa";
 
 type Props = {
-  animal: Pet;
+  report: Report;
 };
 
-export function PostContainer({ animal }: Props) {
+export function ReportContainer({ report }: Props) {
   const navigate = useNavigate();
   return (
     <motion.div
-      onClick={() => navigate(`/edit-listing/${animal.id}`)}
+      onClick={() => navigate(`/edit-report/${report.id}`)}
       whileTap={{
         scale: 0.97,
       }}
@@ -21,11 +21,13 @@ export function PostContainer({ animal }: Props) {
     >
       <div className="flex flex-row justify-between items-center pr-10 ">
         <img
-          src={animal.images[0]}
-          className="h-30 w-30 object-cover flex-center"
+          src={report.images[0]}
+          className="h-30 w-30 object-cover flex-center "
         />
         <div className="flex flex-row flex-center gap-2">
-          <h2 className=" font-primary-semibold text-end">{animal.name}</h2>
+          <h2 className=" font-primary-semibold text-end ">
+            Reporte de mascota perdida
+          </h2>
           <FaChevronRight size={20} />
         </div>
       </div>
