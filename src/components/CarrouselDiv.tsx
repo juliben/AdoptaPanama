@@ -45,9 +45,9 @@ export const CarrouselDiv = () => {
 
   return (
     <div className="relative h-[70%] min-h-[530px] bg-light-gray flex flex-col rounded-3xl justify-start items-start py-8 px-3">
-      <h3 className="font-semibold pl-3 mb-5 sm:text-3xl">
+      <h2 className="font-semibold pl-3 mb-5 sm:text-3xl ">
         Animales en adopción
-      </h3>
+      </h2>
       <div className="flex flex-row w-full h-full overflow-x-scroll pl-3">
         {shownAnimals.map((animal, index) => (
           <PetCard key={index} animal={animal} index={index} />

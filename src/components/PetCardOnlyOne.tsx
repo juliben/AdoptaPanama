@@ -10,8 +10,10 @@ export const PetCardOnlyOne = ({ animal }: Props) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="relative h-[70%] min-h-[500px]  bg-light-gray flex flex-col rounded-3xl py-8 px-3 ">
-        <h3 className="font-semibold pl-3 mb-5">Animales en adopción</h3>
+      <div className="relative h-fit bg-light-gray flex flex-col rounded-3xl py-8 px-3 ">
+        <h2 className="font-semibold pl-3 mb-5 text-2xl lg:text-5xl lg:mb-10">
+          Animales en adopción
+        </h2>
         <div
           onClick={() => navigate(`/pet-details/${animal.id}`)}
           className="relative flex-center w-fit self-center "
@@ -19,7 +21,7 @@ export const PetCardOnlyOne = ({ animal }: Props) => {
           <img
             src={animal.images[0]}
             alt={animal.name}
-            className="w-[200px] h-[250px] object-cover rounded-3xl self-center shadow"
+            className="w-[200px] h-[250px] lg:h-[400px] lg:w-[300px] object-cover rounded-3xl self-center shadow"
           />
           <motion.button
             whileTap={{

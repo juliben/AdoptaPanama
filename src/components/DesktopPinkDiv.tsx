@@ -5,7 +5,7 @@ export const DesktopPinkDiv = () => {
 
   return (
     <div className="bg-white mt-10 desktop flex-col">
-      <h3 className="mb-2">AdoptaPanama</h3>
+      <h2 className="mb-2 lg:text-5xl lg:mt-10 lg:mb-5">AdoptaPanama</h2>
       <div className="grid grid-cols-2">
         <div className="flex my-5 relative rounded-3xl w-full  overflow-hidden">
           <img src="/pink-blob-bg.svg" alt="" className="w-full" />
@@ -16,7 +16,7 @@ export const DesktopPinkDiv = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col mx-10 mt-9 text-xl justify-between mb-4 ">
+        <div className="flex flex-col mx-10 mt-9 sm:text-sm md:text-lg lg:text-xl justify-between mb-4 sm:test">
           <div className="text-gray-700 flex flex-col gap-5">
             <p>
               AdoptaPanama es una plataforma sin fines de lucro para ayudar a
