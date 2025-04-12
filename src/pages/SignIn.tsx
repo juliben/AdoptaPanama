@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { TopRow } from "../components/TopRow";
 import { Formik, FormikValues } from "formik";
 import { signIn } from "../supabase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const SignIn = () => {
   const navigate = useNavigate();
@@ -73,9 +73,9 @@ export const SignIn = () => {
       {error && <p className="error-text px-5 mt-7">{error}</p>}
       <div className="flex flex-row justify-center items-center gap-1.5 mt-7">
         <p>¿No tienes una cuenta?</p>
-        <a href="/register">
+        <Link to="/register">
           <p className="text-primary">Registrarse</p>
-        </a>
+        </Link>
       </div>
     </>
   );
