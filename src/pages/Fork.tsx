@@ -8,29 +8,38 @@ export const Fork = () => {
   return (
     <div className="h-screen">
       <TopRow />
-
-      <motion.div
-        whileTap={{ scale: 0.98 }}
-        onClick={() => navigate("/listings")}
-        className="flex-center h-[20%] overflow-hidden bg-soft-pink mt-7 mx-4 rounded-3xl shadow"
-      >
-        <img
-          src="/blob-scene-pink.png"
-          className="w-full h-full object-cover"
-        />
-        <h4 className="absolute text-xl">Adopciones</h4>
-      </motion.div>
-      <motion.div
-        whileTap={{ scale: 0.98 }}
-        onClick={() => navigate("/reports")}
-        className="relative  text-center flex-center h-[20%] bg-pastel-purple mt-5 mx-4 rounded-3xl shadow overflow-hidden"
-      >
-        <img
-          src="/blob-scene-green.png"
-          className="w-full h-full object-cover"
-        />
-        <h4 className="absolute text-xl">Mascotas perdidas</h4>
-      </motion.div>
+      <div className="flex flex-col sm:flex-row h-screen">
+        <div className="flex-1 flex items-center justify-center bg-soft-pink p-6">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-4xl mb-4">Adopciones</h2>
+            <p className="text-base sm:text-lg mb-4">
+              Encuentra o publica una mascota para adoptar.
+            </p>
+            <motion.button
+              onClick={() => navigate("/listings")}
+              whileTap={{ scale: 0.97 }}
+              className="button-pill bg-light-gray"
+            >
+              Ir a adopciones
+            </motion.button>
+          </div>
+        </div>
+        <div className="flex-1 flex items-center justify-center bg-pastel-purple p-6">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-4xl mb-4">Mascotas perdidas</h2>
+            <p className="text-base sm:text-lg mb-4">
+              Publica una mascota perdida.
+            </p>
+            <motion.button
+              onClick={() => navigate("/reports")}
+              whileTap={{ scale: 0.97 }}
+              className="button-pill bg-light-gray"
+            >
+              Ir a reportes
+            </motion.button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

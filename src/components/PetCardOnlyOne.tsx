@@ -10,7 +10,7 @@ export const PetCardOnlyOne = ({ animal }: Props) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="relative h-[70%] min-h-[500px] bg-light-gray flex flex-col rounded-3xl mx-2 py-8 px-3">
+      <div className="relative h-[70%] min-h-[500px]  bg-light-gray flex flex-col rounded-3xl py-8 px-3 ">
         <h3 className="font-semibold pl-3 mb-5">Animales en adopción</h3>
         <div
           onClick={() => navigate(`/pet-details/${animal.id}`)}
@@ -25,7 +25,7 @@ export const PetCardOnlyOne = ({ animal }: Props) => {
             whileTap={{
               scale: 0.9,
             }}
-            className="absolute text-center bg-accent-light rounded-full w-[90%] self-center py-3 bottom-2 shadow"
+            className="absolute text-center bg-accent-light rounded-full w-[90%] self-center py-3 bottom-2 shadow  cursor-pointer"
           >
             Contactar
           </motion.button>
@@ -45,7 +45,7 @@ export const PetCardOnlyOne = ({ animal }: Props) => {
 
         <button
           onClick={() => navigate("/listings")}
-          className="outline-1 rounded-full px-5 py-2 mt-5 outline-gray-400 self-center"
+          className="outline-1 rounded-full px-5 py-2 mt-5 outline-gray-400 self-center cursor-pointer"
         >
           Ver todos
         </button>

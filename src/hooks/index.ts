@@ -4,3 +4,4 @@ export * from "./useFetchReports";
 export * from "./useFetchReportPosts";
 export * from "./useFetchReportById";
 export * from "./useFetchPosts";
+export * from "./useFetchCounts";

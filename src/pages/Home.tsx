@@ -4,15 +4,17 @@ import {
   PinkDiv,
   CarrouselDiv,
   Accordion,
+  DesktopPinkDiv,
 } from "../components";
 import { Analytics } from "@vercel/analytics/react";
 
 export const Home = () => {
   return (
-    <div className="lg:mx-10 h-screen w-full">
+    <div className="h-screen max-w-screen mx-2 lg:mx-10">
       <TopRow />
       <MainBanner />
       <PinkDiv />
+      <DesktopPinkDiv />
       <CarrouselDiv />
       <Accordion />
       <Analytics />

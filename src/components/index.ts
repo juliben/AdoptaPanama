@@ -8,6 +8,7 @@ export * from "./DogBlob";
 export * from "./MainBanner";
 export * from "./DrawerMenu";
 export * from "./PinkDiv";
+export * from "./DesktopPinkDiv";
 export * from "./HamburgerMenu";
 export * from "./TopRow";
 export * from "./CategoryRow";

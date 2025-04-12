@@ -78,7 +78,7 @@ export const Listings = () => {
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={handleNavigate}
-            className="rounded-full px-2 py-1 bg-soft-pink w-[92%] shadow mb-4"
+            className="rounded-full px-2 py-1 bg-soft-pink w-[92%] sm:w-1/3 shadow mb-4"
           >
             Publicar una mascota
           </motion.button>

@@ -9,7 +9,7 @@ export const BackButton = () => {
       <FaChevronLeft
         size={30}
         onClick={() => navigate(-1)}
-        className="cursor-pointer  text-dark-primary z-3 hover:cursor-pointer"
+        className="cursor-pointer  text-dark-primary z-3 hover:cursor-pointer sm:mx-10 sm:mt-10 "
       />
     </motion.div>
   );

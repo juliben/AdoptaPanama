@@ -24,8 +24,11 @@ export function EmblaCarousel({ slides }: Props) {
 
   return (
     <>
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex h-[54vh] w-screen">
+      <div
+        className="overflow-hidden sm:w-[90vh] sm:rounded-3xl"
+        ref={emblaRef}
+      >
+        <div className="flex h-[54vh] sm:h-[70vh] w-screen sm:w-[100%]">
           {slides.map((slide, index) => (
             <div className="min-w-full min-h-full flex-center" key={index}>
               <img

@@ -37,7 +37,7 @@ export const Accordion = () => {
   ];
 
   return (
-    <div className="h-[60vh] mx-2 mt-8">
+    <div className="h-[60vh] mt-8">
       <h3 className="my-5">Preguntas frecuentes</h3>
       {questions.map((question) => (
         <>

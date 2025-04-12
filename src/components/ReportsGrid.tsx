@@ -13,7 +13,7 @@ export const ReportsGrid = ({ reports }: Props) => {
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mx-4">
       {reports.map((report: Report) => (
         <div
-          className="relative h-[250px] rounded-2xl overflow-hidden cursor-pointer shadow"
+          className="relative h-[250px]  sm:h-[320px] sm:w-[250px]  rounded-2xl overflow-hidden cursor-pointer shadow"
           onClick={() => navigate(`/report-details/${report.id}`)}
         >
           <img
