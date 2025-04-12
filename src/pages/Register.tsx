@@ -20,8 +20,6 @@ export const Register = () => {
       .required("Se requiere confirmar la contraseña."),
   });
 
-  <></>;
-
   const handleSubmit = (values: FormikValues) => {
     const session = signUp(values.email, values.password);
     console.log("Signed up:" + session);
