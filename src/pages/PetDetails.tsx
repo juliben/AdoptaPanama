@@ -45,13 +45,13 @@ export const PetDetails = () => {
             <h3 className="font-primary-semibold mr-2">
               {animal.name}, {animal.age}
             </h3>
-            <div className="flex-center flex-row text-primary">
+            <div className="flex-center flex-row text-primary gap-1">
               <IoIosPin size={18} />
               <p>{animal.location}</p>
             </div>
           </div>
           <div
-            className={`flex flex-row ${
+            className={`flex flex-row gap-1 ${
               animal.sex === "hembra" ? "text-pink-300" : "text-blue-400"
             }`}
           >

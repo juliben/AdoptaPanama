@@ -1,3 +1,4 @@
+import { ReportsGrid } from "./../components/ReportsGrid";
 import { useContext } from "react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
@@ -5,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 import { TopRow } from "../components";
 import { useFetchReports } from "../hooks";
+import { Report } from "../../types";
+
 import { SyncLoader } from "react-spinners";
 
 export const Reports = () => {
@@ -51,9 +54,18 @@ export const Reports = () => {
   }
 
   return (
-    <div>
+    <>
       <TopRow />
-      Reports
-    </div>
+      <div className="flex-center flex-col mt-2">
+        <motion.button
+          whileTap={{ scale: 0.97 }}
+          onClick={handleNavigate}
+          className="rounded-full px-2 py-1 bg-soft-pink w-[92%] shadow mb-4"
+        >
+          Crear un reporte
+        </motion.button>
+      </div>
+      <ReportsGrid reports={reports} />
+    </>
   );
 };

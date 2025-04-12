@@ -80,13 +80,11 @@ export const CreateReport = () => {
 
     try {
       const { error } = await supabase.from("reports").insert({
-        title: values.title,
-        age: values.age,
-        species: values.species,
-        sex: values.sex,
+        images: imagePublicUrlsRef.current,
+        date: values.date,
         location: values.location,
         description: values.description,
-        images: imagePublicUrlsRef.current,
+        contact: values.contact,
         user: id,
         email: email,
       });
@@ -125,7 +123,6 @@ export const CreateReport = () => {
         <Formik
           initialValues={{
             images: [],
-            title: "",
             date: today,
             location: "",
             description: "",
@@ -135,15 +132,6 @@ export const CreateReport = () => {
         >
           {({ values, handleChange, handleSubmit }) => (
             <form className="mt-7" onSubmit={handleSubmit}>
-              <p>Título</p>
-              <input
-                autoCapitalize="words"
-                name="title"
-                value={values.title}
-                onChange={handleChange}
-                className="input bg-white my-3"
-                placeholder="Título del reporte"
-              />
               <p>Añade hasta cinco fotos</p>
               <input
                 multiple
@@ -161,7 +149,7 @@ export const CreateReport = () => {
                 onChange={handleChange}
                 className="input bg-white my-3 appearance-none w-fit"
               />
-              <p>¿Dónde fue visto por última vez?</p>
+              <p>Área donde fue visto por última vez</p>
               <input
                 autoCapitalize="words"
                 name="location"

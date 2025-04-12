@@ -17,7 +17,7 @@ export const CreateListing = () => {
 
   useEffect(() => {
     if (!id) {
-      alert("Por favor vuelva a iniciar sesión.");
+      alert("Por favor, vuelve a iniciar sesión.");
       navigate("/sign-in");
     }
   }, []);
@@ -78,15 +78,16 @@ export const CreateListing = () => {
 
     try {
       const { error } = await supabase.from("pets").insert({
+        species: values.species,
         name: values.name,
         age: values.age,
-        species: values.species,
         sex: values.sex,
         location: values.location,
         description: values.description,
         images: imagePublicUrlsRef.current,
         user: id,
         email: email,
+        contact: values.contact,
       });
       if (error) {
         console.log(error);
@@ -130,6 +131,7 @@ export const CreateListing = () => {
             age: 0,
             location: "",
             description: "",
+            contact: "",
           }}
           onSubmit={handleSubmit}
         >
@@ -249,6 +251,15 @@ export const CreateListing = () => {
                 onChange={handleChange}
                 className="input bg-white my-3 h-[110px] rounded-2xl  "
                 placeholder=""
+              />
+              <p>Contacto</p>
+              <input
+                name="contact"
+                value={values.contact}
+                maxLength={15}
+                onChange={handleChange}
+                className="input bg-white my-3"
+                placeholder="Número de contacto"
               />
               {error && <p className="error-text mb-4">{error}</p>}
               <motion.button
