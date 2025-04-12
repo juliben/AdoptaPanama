@@ -17,7 +17,7 @@ export function SortMenu({
   };
 
   return (
-    <div className="absolute top-26 right-5 bg-accent-light shadow rounded p-4 z-1">
+    <div className="absolute top-26 right-5 md:top-[18%] md:right-[20%] lg:top-[16%] lg:right-[30%] bg-accent-light shadow rounded p-4 z-1">
       <p className="font-primary-semibold">Ordenar por:</p>
       <p
         onClick={() => handleClick("oldestPosted")}

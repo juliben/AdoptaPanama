@@ -78,7 +78,7 @@ export const Listings = () => {
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={handleNavigate}
-            className="rounded-full px-2 py-1 bg-soft-pink w-[92%] sm:w-1/3 shadow mb-4"
+            className="rounded-full px-2 py-1 bg-soft-pink w-[92%] sm:w-1/3 shadow mb-4 cursor-pointer"
           >
             Publicar una mascota
           </motion.button>
@@ -89,7 +89,7 @@ export const Listings = () => {
           <p>No hay animalitos publicados.</p>
           <motion.button
             whileTap={{ scale: 0.97 }}
-            className="bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6"
+            className="bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6 cursor-pointer"
             onClick={handleNavigate}
           >
             {user

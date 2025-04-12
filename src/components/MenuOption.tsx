@@ -12,7 +12,7 @@ export const MenuOption = ({ title, icon, onClick }: Props) => {
     <motion.div
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className="flex flex-row items-center gap-2 bg-white px-5 py-4 rounded-full"
+      className="flex flex-row items-center gap-2 bg-white px-5 py-4 rounded-full cursor-pointer"
     >
       {icon}
       <p>{title}</p>

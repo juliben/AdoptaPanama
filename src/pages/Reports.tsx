@@ -36,7 +36,7 @@ export const Reports = () => {
           <motion.button
             onClick={handleNavigate}
             whileTap={{ scale: 0.97 }}
-            className="bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6"
+            className="bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6 cursor-pointer"
           >
             {!user ? "Inicia sesión para crear un reporte" : "Crear un reporte"}
           </motion.button>
@@ -47,7 +47,7 @@ export const Reports = () => {
             <motion.button
               whileTap={{ scale: 0.97 }}
               onClick={handleNavigate}
-              className="rounded-full px-2 py-1 bg-soft-pink w-[92%] shadow mb-4"
+              className="rounded-full px-2 py-1 bg-soft-pink w-[92%] shadow mb-4 cursor-pointer"
             >
               Crear un reporte
             </motion.button>
