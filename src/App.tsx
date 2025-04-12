@@ -32,7 +32,6 @@ function App() {
             <Route path="/listings" element={<Listings />} />
             <Route path="/create-listing" element={<CreateListing />} />
             <Route path="/reports" element={<Reports />} />
-
             <Route path="/create-report" element={<CreateReport />} />
             <Route path="/contact" element={<Contact />} />
             <Route

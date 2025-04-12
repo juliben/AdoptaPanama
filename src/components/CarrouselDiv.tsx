@@ -22,9 +22,7 @@ export const CarrouselDiv = () => {
   if (animals.length === 0) {
     return (
       <div className="flex flex-col  h-[50%] justify-between bg-light-gray  rounded-3xl mx-2  items-start py-8 px-3">
-        <h2 className="font-semibold text-3xl pl-3 mb-5">
-          Animales en adopción
-        </h2>
+        <h3 className="font-semibold pl-3 mb-5">Animales en adopción</h3>
         <p className="flex-center text-center px-10">
           ¡No hay ningún animalito en adopción ahora mismo!
         </p>

@@ -110,9 +110,6 @@ export const Register = () => {
           <p className="text-primary">Iniciar sesión</p>
         </Link>
       </div>
-      {/* <button onClick={() => signOut()} className="button-submit mx-2">
-        Debug
-      </button> */}
     </>
   );
 };
