@@ -22,22 +22,15 @@ export const Reports = () => {
     }
   };
 
-  if (loading === true) {
-    return (
-      <div>
-        <TopRow />
+  return (
+    <>
+      <TopRow />
+      {loading ? (
         <SyncLoader
           color="#dff5b2"
           className="absolute top-1/2 right-1/2 translate-x-1/2 translate-y-1/2"
         />
-      </div>
-    );
-  }
-
-  if (reports.length < 1) {
-    return (
-      <div>
-        <TopRow />
+      ) : reports.length < 1 ? (
         <div className="flex flex-col items-center justify-center mt-15">
           <p className="">¡No hay reportes de mascotas perdidas!</p>
           <motion.button
@@ -48,23 +41,20 @@ export const Reports = () => {
             {!user ? "Inicia sesión para crear un reporte" : "Crear un reporte"}
           </motion.button>
         </div>
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <TopRow />
-      <div className="flex-center flex-col mt-2">
-        <motion.button
-          whileTap={{ scale: 0.97 }}
-          onClick={handleNavigate}
-          className="rounded-full px-2 py-1 bg-soft-pink w-[92%] shadow mb-4"
-        >
-          Crear un reporte
-        </motion.button>
-      </div>
-      <ReportsGrid reports={reports} />
+      ) : (
+        <>
+          <div className="flex-center flex-col mt-2">
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={handleNavigate}
+              className="rounded-full px-2 py-1 bg-soft-pink w-[92%] shadow mb-4"
+            >
+              Crear un reporte
+            </motion.button>
+          </div>
+          <ReportsGrid reports={reports} />
+        </>
+      )}
     </>
   );
 };
