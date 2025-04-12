@@ -9,6 +9,7 @@ import { signOut } from "../supabase/auth";
 import { useNavigate } from "react-router-dom";
 import { MenuOption } from "../components/MenuOption";
 
+
 export const Profile = () => {
   const navigate = useNavigate();
   const user = useContext(AuthContext);

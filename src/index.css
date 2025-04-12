@@ -86,16 +86,16 @@ p {
     @apply text-red-400 font-sans text-xs mb-2;
   }
   .button-submit {
-    @apply bg-accent-light font-primary-semibold py-3 px-2 rounded-full mt-1 shadow hover:cursor-pointer;
+    @apply bg-accent-light font-sans py-3 px-2 rounded-full mt-1 shadow-xs hover:cursor-pointer;
   }
   .pill {
     @apply rounded-full px-2 py-1 sm:px-5 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 text-xs  sm:text-lg md:text-2xl lg:text-3xl bg-white text-dark-primary font-primary-semibold max-w-fit;
   }
-  .button-pill {
-    @apply py-5 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-primary-semibold rounded-full max-w-fit shadow hover:cursor-pointer;
+  .button-pill-big {
+    @apply py-5 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-sans rounded-full max-w-fit shadow-xs hover:cursor-pointer;
   }
-  .button-pill-small {
-    @apply py-2 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-primary-semibold rounded-full max-w-fit shadow hover:cursor-pointer;
+  .button-pill {
+    @apply bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6 self-center hover:cursor-pointer;
   }
   .menu-text {
     @apply pr-2 text-5xl mb-7 text-right font-sans font-semibold text-white hover:cursor-pointer;

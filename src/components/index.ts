@@ -21,3 +21,4 @@ export * from "./PetCard";
 export * from "./PetCardOnlyOne";
 export * from "./EmblaCarousel";
 export * from "./PostContainer";
+export * from "./ClickableText";

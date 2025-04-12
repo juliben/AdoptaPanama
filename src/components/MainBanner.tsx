@@ -41,7 +41,7 @@ export function MainBanner() {
         whileTap={{
           scale: 0.95,
         }}
-        className="button-pill -rotate-13 absolute bottom-[10%] left-[10%]  sm:bottom-[14%] sm:left-[33%] hover:cursor-pointer"
+        className="button-pill-big -rotate-13 absolute bottom-[10%] left-[10%]  sm:bottom-[14%] sm:left-[33%] hover:cursor-pointer"
       >
         COMENZAR
       </motion.button>

@@ -1,12 +1,11 @@
 import { useContext, useEffect, useState, useRef } from "react";
 import { motion } from "motion/react";
-import { BackButton, TopRow } from "../components";
+import { TopRow } from "../components";
 import { AuthContext } from "../contexts/AuthContext";
 import { Formik, FormikValues } from "formik";
 import { useNavigate } from "react-router-dom";
 import supabase from "../supabase/supabase";
 import { SyncLoader } from "react-spinners";
-import { FaChevronLeft } from "react-icons/fa";
 
 export const CreateListing = () => {
   const [images, setImages] = useState<File[]>([]);

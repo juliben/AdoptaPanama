@@ -31,7 +31,7 @@ export const CarrouselDiv = () => {
         <motion.button
           onClick={handleNavigate}
           whileTap={{ scale: 0.97 }}
-          className="button-pill-small text-sm mt-4 self-center"
+          className="button-pill"
         >
           {!user
             ? "Inicia sesión para hacer una publicación"

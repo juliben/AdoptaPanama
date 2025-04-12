@@ -6,15 +6,6 @@ import { motion } from "motion/react";
 
 export const Fork = () => {
   const navigate = useNavigate();
-  const user = useContext(AuthContext);
-
-  const handleNavigate = () => {
-    if (user) {
-      navigate("/create-listing");
-    } else {
-      navigate("/register");
-    }
-  };
 
   return (
     <div className="h-screen">
@@ -33,7 +24,7 @@ export const Fork = () => {
       </motion.div>
       <motion.div
         whileTap={{ scale: 0.98 }}
-        onClick={handleNavigate}
+        onClick={() => navigate("/reports")}
         className="relative  text-center flex-center h-[20%] bg-pastel-purple mt-5 mx-4 rounded-3xl shadow overflow-hidden"
       >
         <img

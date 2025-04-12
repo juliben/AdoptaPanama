@@ -53,7 +53,6 @@ export const Listings = () => {
 
   return (
     <>
-      {/* <Debug log={dateA} /> */}
       <TopRow />
       <CategoryRow
         setSelectedCategory={setSelectedCategory}
@@ -90,7 +89,7 @@ export const Listings = () => {
           <p>No hay animalitos en adopción.</p>
           <motion.button
             whileTap={{ scale: 0.97 }}
-            className="bg-accent-light font-primary-semibold py-3 px-6 rounded-full mt-6"
+            className="bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6"
             onClick={handleNavigate}
           >
             {user
