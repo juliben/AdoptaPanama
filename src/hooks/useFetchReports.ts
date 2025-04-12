@@ -7,7 +7,7 @@ import { Report } from "../../types";
 export const useFetchReports = () => {
   const user = useContext(AuthContext);
   const [reports, setReports] = useState<Report[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
