@@ -5,7 +5,9 @@ export const DesktopPinkDiv = () => {
 
   return (
     <div className="bg-white mt-10 desktop flex-col">
-      <h2 className="mb-2 lg:text-5xl lg:mt-10 lg:mb-5">AdoptaPanama</h2>
+      <h2 className="mb-2 lg:text-5xl sm:text-2xl md:text-3xl lg:mt-10 lg:mb-5">
+        AdoptaPanama
+      </h2>
       <div className="grid grid-cols-2">
         <div className="flex my-5 relative rounded-3xl w-full  overflow-hidden">
           <img src="/pink-blob-bg.svg" alt="" className="w-full" />

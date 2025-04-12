@@ -11,7 +11,7 @@ export const PetCardOnlyOne = ({ animal }: Props) => {
   return (
     <>
       <div className="relative h-fit bg-light-gray flex flex-col rounded-3xl py-8 px-3 ">
-        <h2 className="font-semibold pl-3 mb-5 text-2xl lg:text-5xl lg:mb-10">
+        <h2 className="font-semibold pl-3 mb-5 text-2xl  md:text-3xl  lg:text-5xl lg:mb-10">
           Animales en adopción
         </h2>
         <div

@@ -37,7 +37,7 @@ export const TopMenu = () => {
       {location.pathname === "/" && !user && (
         <div
           onClick={() => navigate("/sign-in")}
-          className="flex-center text-center rounded-full border border-gray-300 px-2 py-2 md:px-5 md:py-2.5 font-semibold text-xs cursor-pointer"
+          className="flex-center text-center rounded-full border border-gray-300 px-2 py-2 md:px-5 md:py-2.5 font-semibold text-sm cursor-pointer"
         >
           Iniciar sesión
         </div>
