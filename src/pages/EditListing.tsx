@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 
 import {
   TopRow,
-  Wave,
   EditFloatingButton,
   BackButton,
   EmblaCarousel,
@@ -34,7 +33,6 @@ export const EditListing = () => {
 
   return (
     <>
-      <Wave />
       <BackButton />
 
       <div className="flex flex-col items-center mt-5">

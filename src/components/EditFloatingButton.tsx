@@ -81,10 +81,18 @@ export const EditFloatingButton = ({ id }: Props) => {
         <div className="flex gap-10">
           {!loading ? (
             <>
-              <motion.p whileTap={{ scale: 0.98 }} onClick={handleAdopted}>
+              <motion.p
+                whileTap={{ scale: 0.98 }}
+                onClick={handleAdopted}
+                className="cursor-pointer"
+              >
                 Sí
               </motion.p>
-              <motion.p whileTap={{ scale: 0.98 }} onClick={handleCloseAll}>
+              <motion.p
+                whileTap={{ scale: 0.98 }}
+                onClick={handleCloseAll}
+                className="cursor-pointer"
+              >
                 Cancelar
               </motion.p>
             </>
@@ -107,10 +115,18 @@ export const EditFloatingButton = ({ id }: Props) => {
         <div className="flex gap-10">
           {!loading ? (
             <>
-              <motion.p whileTap={{ scale: 0.98 }} onClick={handleDelete}>
+              <motion.p
+                whileTap={{ scale: 0.98 }}
+                onClick={handleDelete}
+                className="cursor-pointer"
+              >
                 Sí
               </motion.p>
-              <motion.p whileTap={{ scale: 0.98 }} onClick={handleCloseAll}>
+              <motion.p
+                whileTap={{ scale: 0.98 }}
+                onClick={handleCloseAll}
+                className="cursor-pointer"
+              >
                 Cancelar
               </motion.p>
             </>
@@ -129,7 +145,7 @@ export const EditFloatingButton = ({ id }: Props) => {
   return (
     <div
       onClick={() => setOpen(!open)}
-      className="flex rounded-4xl px-4.5 py-4.5 border border-gray-400   bg-accent-light fixed bottom-[5vh] right-[5vh]"
+      className="flex rounded-4xl px-4.5 py-4.5 border border-gray-400   bg-accent-light fixed bottom-[5vh] right-[5vh] cursor-pointer"
     >
       {!open ? (
         "Editar"

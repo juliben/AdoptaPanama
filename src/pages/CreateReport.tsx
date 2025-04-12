@@ -138,7 +138,7 @@ export const CreateReport = () => {
                 onChange={handleImagePick}
                 type="file"
                 accept="image/*"
-                className="input bg-white my-3"
+                className="input bg-white my-3 cursor-pointer"
               />
 
               <p>¿Cuándo se perdió?</p>
@@ -147,7 +147,7 @@ export const CreateReport = () => {
                 type="date"
                 value={values.date}
                 onChange={handleChange}
-                className="input bg-white my-3 appearance-none w-fit"
+                className="input bg-white my-3 appearance-none w-fit cursor-pointer"
               />
               <p>Área donde fue visto por última vez</p>
               <input
@@ -181,7 +181,7 @@ export const CreateReport = () => {
               <motion.button
                 disabled={loading}
                 whileTap={{ scale: 0.97 }}
-                className="button-submit w-full mb-7 mt-2"
+                className="button-submit w-full mb-7 mt-2 cursor-pointer"
                 type="submit"
               >
                 {loading ? <SyncLoader size={5} color={"black"} /> : "Publicar"}

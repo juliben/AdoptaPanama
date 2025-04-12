@@ -22,13 +22,13 @@ export const TopMenu = () => {
       />
       <div className="flex flex-row gap-2 md:gap-10 ">
         <p
-          onClick={() => navigate("/reports")}
+          onClick={() => navigate("/listings")}
           className="hover:cursor-pointer"
         >
           Adopciones
         </p>
         <p
-          onClick={() => navigate("/listings")}
+          onClick={() => navigate("/reports")}
           className="hover:cursor-pointer"
         >
           Mascotas Perdidas
