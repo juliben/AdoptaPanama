@@ -3,13 +3,13 @@ import { useContext } from "react";
 import { BackButton, TopRow } from "../components";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
-import { useFetchPosts, useFetchReports } from "../hooks";
+import { useFetchPosts, useFetchReportPosts } from "../hooks";
 import { SyncLoader } from "react-spinners";
 
 export const MyPosts = () => {
   const user = useContext(AuthContext);
   const { posts, loading: postsLoading } = useFetchPosts();
-  const { reports, loading: reportsLoading } = useFetchReports();
+  const { reports, loading: reportsLoading } = useFetchReportPosts();
   const loading = postsLoading || reportsLoading;
   const navigate = useNavigate();
 
