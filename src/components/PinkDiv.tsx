@@ -8,8 +8,8 @@ export const PinkDiv = () => {
       <img src="/pink-blob-bg.svg" alt="" className=" w-full" />
       <div className="absolute top-1/4 left-1/2 z-3 text-right px-5">
         <img
-          src="/gatito4.png"
-          className="absolute bottom-[-20%] right-[100%] sm:top-0  scale-180 sm:scale-150 brightness-150 z-0 "
+          src="/perrito.png"
+          className="absolute bottom-[-5%] right-[93%] sm:top-0  scale-185 sm:scale-150 brightness-110 z-0 "
         />
         <h3 className="mb-2">Mascotas perdidas</h3>
         <p className="mb-2">Reporta una mascota perdida</p>
