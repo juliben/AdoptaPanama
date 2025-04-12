@@ -7,14 +7,15 @@ import { Report } from "../../types";
 export const useFetchReports = () => {
   const user = useContext(AuthContext);
   const [reports, setReports] = useState<Report[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!user?.id) {
+      return;
+      setLoading(false);
+    }
     setLoading(true);
     const fetchReports = async () => {
-      if (!user?.id) {
-        return;
-      }
       try {
         const { data, error } = await supabase
           .from("reports")

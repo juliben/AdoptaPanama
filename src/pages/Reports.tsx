@@ -22,7 +22,7 @@ export const Reports = () => {
     }
   };
 
-  if (loading) {
+  if (loading === true) {
     return (
       <div>
         <TopRow />
