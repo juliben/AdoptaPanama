@@ -20,7 +20,7 @@ export const TopMenu = () => {
         className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 cursor-pointer"
         onClick={() => navigate("/")}
       />
-      <div className="flex flex-row gap-2 md:gap-10 ">
+      <div className="flex flex-row gap-2 sm:gap-5 ml-16 ">
         <p
           onClick={() => navigate("/listings")}
           className="hover:cursor-pointer"
