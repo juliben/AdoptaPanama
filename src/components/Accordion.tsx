@@ -37,7 +37,7 @@ export const Accordion = () => {
   ];
 
   return (
-    <div className="h-full sm:h-[70vh]  mt-8 mb-10">
+    <div className="h-[65vh] sm:h-[70vh] lg:h-[63vh]  mt-8 mb-10">
       <h2 className="my-5 text-2xl lg:text-5xl lg:mt-20">
         Preguntas frecuentes
       </h2>
