@@ -46,7 +46,7 @@ export const CarrouselDiv = () => {
   }
 
   return (
-    <div className="relative h-[70%] min-h-[530px] bg-light-gray flex flex-col rounded-3xl justify-start items-start py-8 px-3">
+    <div className="relative h-[70%] min-h-[530px]  lg:min-h-[700px] bg-light-gray flex flex-col rounded-3xl justify-start items-start py-8 px-3">
       <h2 className="font-semibold pl-3 mb-5 sm:text-3xl ">
         Animales en adopción
       </h2>
@@ -57,7 +57,7 @@ export const CarrouselDiv = () => {
       </div>
       <button
         onClick={() => navigate("/listings")}
-        className="outline-1 rounded-full px-5 py-2 outline-gray-400 self-center hover:cursor-pointer"
+        className="outline-1 rounded-full px-5 py-2 outline-gray-400 self-center lg:mt-10 hover:cursor-pointer "
       >
         Ver todos
       </button>
