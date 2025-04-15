@@ -24,7 +24,7 @@ export const PetCard = ({ animal, index }: Props) => {
         </>
       )}
       <div
-        className="relative h-[60%] w-[65%]  lg:h-[400px] lg:w-[300px]  overflow-hidden mr-5 min-w-48 min-h-65 bg-white rounded-3xl flex flex-col justify-center text-center"
+        className="relative h-[60%] w-[65%]  lg:h-[75%] lg:w-[300px]  overflow-hidden mr-5 min-w-48 min-h-65 bg-white rounded-3xl flex flex-col justify-center text-center"
         style={{
           transform: `${index === 1 ? "translateY(4%)" : ""}`,
         }}
