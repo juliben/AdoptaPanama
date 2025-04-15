@@ -11,7 +11,7 @@ export const PetCard = ({ animal, index }: Props) => {
     <div className="flex flex-col">
       {index === 1 && (
         <>
-          <p className="text-dark-primary font-semibold  relative top-[-1%] left-[10%] ">
+          <p className="text-dark-primary font-semibold  relative top-[-1%] lg:top-[0%] left-[10%] lg:left-[30%]">
             {animal.name}, {animal.sex}
           </p>
           <img
@@ -53,7 +53,7 @@ export const PetCard = ({ animal, index }: Props) => {
             alt="flecha"
             className=" w-1/4 h-1/8 rotate-180 self-center relative left-[10%] mt-1.5 "
           />
-          <p className="text-dark-primary font-semibold mt-1 pl-3">
+          <p className="text-dark-primary font-semibold mt-1 pl-3 lg:pl-20">
             {animal.name}, {animal.sex}
           </p>
         </>
@@ -65,7 +65,7 @@ export const PetCard = ({ animal, index }: Props) => {
             alt="flecha"
             className="w-1/4 h-1/8 rotate-0 self-center relative left-[10%] mt-1.5 "
           />
-          <p className="text-dark-primary font-semibold mt-1 pl-10">
+          <p className="text-dark-primary font-semibold mt-1 pl-10 lg:pl-40">
             {animal.name}, {animal.sex}
           </p>
         </>
