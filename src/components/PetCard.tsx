@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Pet } from "../../types";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   animal: Partial<Pet>;
@@ -7,6 +8,7 @@ type Props = {
 };
 
 export const PetCard = ({ animal, index }: Props) => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col">
       {index === 1 && (
@@ -38,8 +40,9 @@ export const PetCard = ({ animal, index }: Props) => {
         )}
         {animal && (
           <motion.button
+            onClick={() => navigate(`/pet-details/${animal.id}`)}
             whileTap={{ scale: 0.9 }}
-            className="absolute text-center bg-accent-light rounded-full w-[90%] self-center py-3 bottom-2 shadow"
+            className="absolute text-center bg-accent-light rounded-full w-[90%] self-center py-3 bottom-2 shadow cursor-pointer"
           >
             Contactar
           </motion.button>
