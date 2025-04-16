@@ -92,7 +92,7 @@ p {
     @apply rounded-full px-2 py-1 sm:px-5 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 text-xs  sm:text-lg md:text-2xl lg:text-3xl bg-white text-dark-primary font-primary-semibold max-w-fit;
   }
   .button-pill-big {
-    @apply py-5 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-sans rounded-full max-w-fit shadow-xs hover:cursor-pointer;
+    @apply py-5 px-6 sm:py-3 sm:px-5 md:py-4 md:px-6 lg:py-7 lg:px-10 text-xl sm:text-lg md:text-2xl lg:text-4xl bg-accent-light font-sans rounded-full max-w-fit shadow-xs hover:cursor-pointer z-31;
   }
   .button-pill {
     @apply bg-accent-light font-sans py-3 shadow-xs px-6 rounded-full mt-6 self-center hover:cursor-pointer;
