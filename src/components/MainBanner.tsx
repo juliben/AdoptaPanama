@@ -30,7 +30,7 @@ export function MainBanner() {
       </div>
 
       <motion.button
-        onClick={() => navigate("/way")}
+        onClick={() => navigate("/listings")}
         animate={{
           rotate: [0, 4, -4, 4, -4, 0],
           transition: { delay: 2, duration: 0.5 },
