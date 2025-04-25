@@ -46,21 +46,26 @@ export const CarrouselDiv = () => {
   }
 
   return (
-    <div className="relative h-[70%] min-h-[530px]  lg:min-h-[700px] bg-light-gray flex flex-col rounded-3xl justify-start items-start py-8 px-3">
-      <h2 className="font-semibold pl-3 mb-5 text-2xl sm:text-3xl ">
+    <div className="relative h-auto min-h-[530px] lg:min-h-[700px] bg-light-gray flex flex-col rounded-3xl py-8 px-4 md:px-6">
+      <h2 className="font-semibold mb-5 text-2xl sm:text-3xl pl-1 sm:pl-2">
         Animales en adopción
       </h2>
-      <div className="flex flex-row w-full h-full overflow-x-scroll pl-3 lg:ml-[14%] md:ml-[10%]">
-        {shownAnimals.map((animal, index) => (
-          <PetCard key={index} animal={animal} index={index} />
-        ))}
+  
+      <div className="w-full overflow-x-auto">
+        <div className="flex flex-nowrap gap-4 px-1 sm:px-3">
+          {shownAnimals.map((animal, index) => (
+            <PetCard key={index} animal={animal} index={index} />
+          ))}
+        </div>
       </div>
+  
       <button
         onClick={() => navigate("/listings")}
-        className="outline-1 rounded-full px-5 py-2 outline-gray-400 self-center lg:mt-10 hover:cursor-pointer "
+        className="mt-6 lg:mt-10 self-center rounded-full px-6 py-2 border border-gray-400 hover:bg-gray-100 transition"
       >
         Ver todos
       </button>
     </div>
   );
+  
 };
