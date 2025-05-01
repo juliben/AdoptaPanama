@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { PetCardTwoAnimals } from "./PetCardTwoAnimals";
 
 export const CarrouselDiv = () => {
   const user = useContext(AuthContext);
@@ -45,26 +46,53 @@ export const CarrouselDiv = () => {
     return <PetCardOnlyOne animal={animals[0]} />;
   }
 
-  return (
-    <div className="relative h-auto min-h-[530px] lg:min-h-[700px] bg-light-gray flex flex-col rounded-3xl py-8 px-4 md:px-6">
+  if (animals.length === 2) {
+    return   <div className="relative h-auto min-h-[530px] lg:min-h-[700px] bg-light-gray flex flex-col rounded-3xl py-8 px-4 md:px-6">
+    <div className="w-full max-w-screen-xl mx-auto">
       <h2 className="font-semibold mb-5 text-2xl sm:text-3xl pl-1 sm:pl-2">
         Animales en adopción
       </h2>
-  
-      <div className="w-full overflow-x-auto">
-        <div className="flex flex-nowrap gap-4 px-1 sm:px-3">
+
+      <div className="w-full overflow-x-auto sm:overflow-x-hidden ml-20">
+        <div className="flex flex-nowrap gap-4 sm:gap-0 px-1 sm:px-3">
           {shownAnimals.map((animal, index) => (
-            <PetCard key={index} animal={animal} index={index} />
+            <PetCardTwoAnimals key={index} animal={animal} index={index} />
           ))}
         </div>
       </div>
-  
+
       <button
         onClick={() => navigate("/listings")}
         className="mt-6 lg:mt-10 self-center rounded-full px-6 py-2 border border-gray-400 hover:bg-gray-100 transition"
       >
         Ver todos
       </button>
+    </div>
+  </div>;
+  }
+
+  return (
+    <div className="relative h-auto min-h-[530px] lg:min-h-[700px] bg-light-gray flex flex-col rounded-3xl py-8 px-4 md:px-6">
+      <div className="w-full max-w-screen-xl mx-auto">
+        <h2 className="font-semibold mb-5 text-2xl sm:text-3xl pl-1 sm:pl-2">
+          Animales en adopción
+        </h2>
+  
+        <div className="w-full overflow-x-auto">
+          <div className="flex flex-nowrap gap-4 px-1 sm:px-3">
+            {shownAnimals.map((animal, index) => (
+              <PetCard key={index} animal={animal} index={index} />
+            ))}
+          </div>
+        </div>
+  
+        <button
+          onClick={() => navigate("/listings")}
+          className="mt-6 lg:mt-10 self-center rounded-full px-6 py-2 border border-gray-400 hover:bg-gray-100 transition"
+        >
+          Ver todos
+        </button>
+      </div>
     </div>
   );
   
