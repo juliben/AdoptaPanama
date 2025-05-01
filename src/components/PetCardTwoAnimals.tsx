@@ -10,7 +10,7 @@ type Props = {
 export const PetCardTwoAnimals = ({ animal, index }: Props) => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col lg:ml-25">
+    <div className="flex flex-col sm:ml-25">
       {index === 1 && (
         <>
           <p className="text-dark-primary font-semibold  relative top-[-1%] lg:top-[0%] left-[10%] sm:left-[13%]">
@@ -24,7 +24,7 @@ export const PetCardTwoAnimals = ({ animal, index }: Props) => {
         </>
       )}
       <div
-        className="relative h-[60%] w-[65%]  lg:h-[75%] lg:w-[300px]  overflow-hidden mr-5 min-w-48 min-h-65 bg-white rounded-3xl flex flex-col justify-center text-center"
+        className="relative h-[60%] w-[65%]  lg:h-[75%] lg:w-[300px] overflow-hidden mr-5 min-w-48 min-h-65 bg-white rounded-3xl flex flex-col justify-center text-center"
         style={{
           transform: `${index === 1 ? "translateY(4%)" : ""}`,
         }}
@@ -66,7 +66,7 @@ export const PetCardTwoAnimals = ({ animal, index }: Props) => {
           <img
             src="/flecha-1.png"
             alt="flecha"
-            className="w-1/4 h-1/8 rotate-0 self-center relative left-[10%] mt-1.5 "
+            className="w-1/4 h-1/8 rotate-0 self-center relative left-[10%] mt-1.5"
           />
           <p className="text-dark-primary font-semibold mt-1 pl-10 lg:pl-40">
             {animal.name}, {animal.sex}

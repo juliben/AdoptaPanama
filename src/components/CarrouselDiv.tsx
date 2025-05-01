@@ -53,7 +53,7 @@ export const CarrouselDiv = () => {
         Animales en adopción
       </h2>
 
-      <div className="w-full overflow-x-auto sm:overflow-x-hidden ml-20">
+      <div className="w-full overflow-x-auto sm:overflow-x-hidden sm:ml-20">
         <div className="flex flex-nowrap gap-4 sm:gap-0 px-1 sm:px-3">
           {shownAnimals.map((animal, index) => (
             <PetCardTwoAnimals key={index} animal={animal} index={index} />
