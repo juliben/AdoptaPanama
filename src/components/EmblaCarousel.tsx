@@ -10,6 +10,10 @@ export function EmblaCarousel({ slides }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
+  if (!slides) {
+    return null;
+  }
+
   useEffect(() => {
     if (!emblaApi) return;
 
